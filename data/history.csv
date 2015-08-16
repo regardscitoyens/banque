@@ -1,4 +1,6 @@
+Warning: there is currently no configured backend for boobank
 id,date,rdate,type,raw,category,label,amount
+Error: Backend "creditmutuel" not found.
 Do you want to reconfigure this backend? (Y/n): 
 creditmutuel,2015-08-10,2015-08-10,0,FACTURE SGT15060310004893 DONT TVA 0.38EUR,Not available,FACTURE SGT15060310004893 DONT TVA 0.38EUR,-7.78
 creditmutuel,2015-07-12,2015-07-12,1,VIR RMB. TRAJET AG A BRICE,Not available,RMB. TRAJET AG A BRICE,-200.40
