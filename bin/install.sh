@@ -14,7 +14,7 @@ mkvirtualenv --no-site-packages boobankRC ||
 
 echo
 echo "- Install python dependencies for the env"
-pip install -q PyExecJS virtualenvwrapper ||
+pip install -q csvkit PyExecJS virtualenvwrapper ||
  ( echo "Error: could not create virtualenv boobankRC" && exit 1 )
 
 echo
