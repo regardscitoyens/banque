@@ -62,8 +62,8 @@ cat /tmp/boobank.list |
 source config.inc
 echo '__________________________________'
 echo 'CREDIT MUTUEL History:'
-boobank history $CREDITMUTUEL 2> /dev/null
+boobank history $CREDITMUTUEL -n 10 2> /dev/null
 echo '__________________________________'
 echo 'PAYPAL History:'
-boobank history $PAYPAL 2> /dev/null
+boobank history $PAYPAL -n 10 2> /dev/null
 
