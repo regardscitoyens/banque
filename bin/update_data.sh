@@ -1,8 +1,11 @@
 #!/bin/bash
 
 cd $(dirname $0)/..
+source /usr/local/bin/virtualenvwrapper.sh ||
+ ( echo "Error: could not find virtualenvwrapper.sh" && exit 1 )
+workon boobankRC
 
-. config/config.inc
+source config.inc
 
 boobank -f csv list | sed 's/^[0-9]*EUR@//' | sed 's/,/./g' | sed 's/;/,/g' > data/list.csv
 boobank history -f csv $BANKID | sed 's/^[0-9]*@//' | sed 's/,/./g' | sed 's/;/,/g' > data/.history.csv
