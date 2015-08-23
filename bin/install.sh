@@ -2,7 +2,7 @@
 
 cd $(dirname $0)/..
 echo "- Install possibly missing python pip/virtualenv"
-sudo apt-get -q install python-pip > /dev/null
+sudo apt-get -q install git python-pip > /dev/null
 sudo pip install -q virtualenv virtualenvwrapper > /dev/null
 
 echo
@@ -19,7 +19,9 @@ pip install -q PyExecJS virtualenvwrapper ||
 
 echo
 echo "- Install weboob for the env"
-git clone git://git.symlink.me/pub/weboob/devel.git weboob ||
+# Temporarily use local weboob with fixed paypal until merged
+#git clone git://git.symlink.me/pub/weboob/stable.git weboob ||
+git clone https://github.com/RouxRC/weboob.git -b paypal-commissions weboob ||
  ( echo "Error: could not clone weboob git directory" && exit 1 )
 cd weboob
 echo "installing..."
@@ -47,6 +49,13 @@ echo '__________________________________'
 echo ' - PAYPAL:'
 echo
 weboob-config add paypal
+
+# Update paypal modules with local install until fixed
+echo
+echo file://$(pwd)/weboob/modules/ >> $HOME/.config/weboob/sources.list
+weboob-config update > /tmp/weboob-config.update.log 2>&1 ||
+ ( echo "Error updating paypal module" && cat /tmp/weboob-config.update.log)
+
 echo
 echo '__________________________________'
 echo "Install finished!"
