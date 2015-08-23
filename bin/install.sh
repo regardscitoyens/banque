@@ -1,9 +1,6 @@
 #!/bin/bash
 
 cd $(dirname $0)/..
-echo "- Install possibly missing python pip/virtualenv"
-sudo apt-get -q install git python-pip > /dev/null
-sudo pip install -q virtualenv virtualenvwrapper > /dev/null
 
 echo
 echo "- Create boobankRC virtualenv using virtualenvwrapper"
@@ -62,6 +59,9 @@ echo "Install finished!"
 echo 'Use source "/usr/local/bin/virtualenvwrapper.sh && workon boobankRC" to activate virtualenv and use weboob features such as "boobank list" or "boobank history".'
 
 # Generate config.inc from boobank list
+echo
+echo '__________________________________'
+echo 'Accounts balance:'
 boobank list 2> /dev/null > /tmp/boobank.list
 cat /tmp/boobank.list
 cat /tmp/boobank.list |

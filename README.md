@@ -10,6 +10,10 @@ L'export est réalisé grace aux plugins [creditmutuel](http://weboob.org/module
 ## Installation
 
 ```bash
+# install dependencies
+sudo apt-get -q install git python-pip
+sudo pip install -q virtualenv virtualenvwrapper
+# run installer
 bin/install.sh
 ```
 
