@@ -19,7 +19,7 @@ bin/install.sh
 bin/update_data.sh
 ```
 
-## Dev:
+## Développement
 
 - Exécution sans autocommit
 
@@ -28,7 +28,8 @@ bin/update_data.sh nocommit
 ```
 
 - Utiliser les outils weboob
-Weboob est installé dans le virtualenv boobankRC. Il faut donc l'activer:
+
+Weboob est installé dans le virtualenv `boobankRC`. Il faut donc l'activer:
 
 ```bash
 # D'ordinaire les envs sont installés dans $HOME/.virtualenvs
