@@ -24,7 +24,8 @@ for BANKID in $CREDITMUTUEL $PAYPAL; do
    sed 's/^[0-9A-Z]*@//' |
    sed 's/ 00:00:00//g' |
    sed -r 's/Not (available|loaded)//g' |
-   sed -r 's/(Don|Paiement récurrent) de (\w)[^; ]+( (\w)[^; ]+)*?(;| \(€)/\1 de \2.\4.\5/g' |
+   sed -r 's/Paiement récurrent de /Don récurrent de /g' |
+   sed -r 's/(Don( récurrent)? de )(\w)[^; ]+( (\w)[^; ]+)*?(;| \(€)/\1\3.\5.\6/g' |
    csvcut -d ";" -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv
   rm -f data/.history.${BANKID}.csv.tmp
 done
