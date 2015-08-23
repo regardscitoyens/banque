@@ -10,6 +10,10 @@ L'export est réalisé grace aux plugins [creditmutuel](http://weboob.org/module
 ## Installation
 
 ```bash
+# install dependencies
+sudo apt-get -q install git python-pip
+sudo pip install -q virtualenv virtualenvwrapper
+# run installer
 bin/install.sh
 ```
 
@@ -19,7 +23,7 @@ bin/install.sh
 bin/update_data.sh
 ```
 
-## Dev:
+## Développement
 
 - Exécution sans autocommit
 
@@ -28,7 +32,8 @@ bin/update_data.sh nocommit
 ```
 
 - Utiliser les outils weboob
-Weboob est installé dans le virtualenv boobankRC. Il faut donc l'activer:
+
+Weboob est installé dans le virtualenv `boobankRC`. Il faut donc l'activer:
 
 ```bash
 # D'ordinaire les envs sont installés dans $HOME/.virtualenvs
