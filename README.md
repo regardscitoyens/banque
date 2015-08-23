@@ -13,15 +13,42 @@ L'export est réalisé grace aux plugins [creditmutuel](http://weboob.org/module
 bin/install.sh
 ```
 
+## Exécution (attention autocommit)
+
+```bash
+bin/update_data.sh
+```
+
+## Dev:
+
+- Exécution sans autocommit
+
+```bash
+bin/update_data.sh nocommit
+```
+
+- Utiliser les outils weboob
+Weboob est installé dans le virtualenv boobankRC. Il faut donc l'activer:
+
+```bash
+# D'ordinaire les envs sont installés dans $HOME/.virtualenvs
+~/.virtualenvs/boobankRC/bin/activate
+# ou avec virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
+workon boobankRC
+```
+
+## Reset bank account logins
+```bash
+source /usr/local/bin/virtualenvwrapper.sh
+workon boobankRC
+weboob-config add creditmutuel
+weboob-config add paypal
+```
+
 ## Désinstallation
 
 ```bash
 bin/uninstall.sh
-```
-
-## Exécution
-
-```bash
-bin/update_data.sh
 ```
 
