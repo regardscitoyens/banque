@@ -1,14 +1,127 @@
 date,id,amount,raw,type,commission,vdate,label
+2015-08-19,paypal,19.07,Don de j.l.,0,-0.93,,"Don de j.l. (€20,00)"
 2015-08-19,creditmutuel,-253.50,VIR REPAS AG A TANGUI,1,,2015-08-19,REPAS AG A TANGUI
+2015-08-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
+2015-08-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
 2015-08-10,creditmutuel,-7.78,"FACTURE SGT15060310004893 DONT TVA 0,38EUR",0,,2015-08-01,"FACTURE SGT15060310004893 DONT TVA 0,38EUR"
+2015-08-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-07-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
+2015-07-14,paypal,-28.75,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2015-07-12,creditmutuel,-200.40,VIR RMB. TRAJET AG A BRICE,1,,2015-07-12,RMB. TRAJET AG A BRICE
 2015-07-12,creditmutuel,-148.90,VIR REMBOURSEMENT REPAS AG,1,,2015-07-12,REMBOURSEMENT REPAS AG
 2015-07-12,creditmutuel,-118.20,VIR REPAS AG A TANGUI,1,,2015-07-12,REPAS AG A TANGUI
 2015-07-12,creditmutuel,-109.00,VIR REMBOURSEMENT TRAJET AG,1,,2015-07-12,REMBOURSEMENT TRAJET AG
+2015-07-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
 2015-07-10,creditmutuel,-7.78,"FACTURE SGT15060310004262 DONT TVA 0,38EUR",0,,2015-07-01,"FACTURE SGT15060310004262 DONT TVA 0,38EUR"
 2015-07-09,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1691422 DEDIBOX 1691422,2,,2015-07-09,SEPA ONLINE SAS ONL 1691422 DEDIBOX 1691422
+2015-07-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-06-25,paypal,19.07,Don de p.s.,0,-0.93,,"Don de p.s. (€20,00)"
+2015-06-21,paypal,-35.94,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-06-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
+2015-06-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
 2015-06-10,creditmutuel,-7.78,"FACTURE SGT15060310003555 DONT TVA 0,38EUR",0,,2015-06-10,"FACTURE SGT15060310003555 DONT TVA 0,38EUR"
 2015-06-08,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1660035 DEDIBOX 1660035,2,,2015-06-08,SEPA ONLINE SAS ONL 1660035 DEDIBOX 1660035
+2015-06-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-06-02,paypal,23.90,Don de R.A.,0,-1.10,,"Don de R.A. (€25,00)"
+2015-05-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
 2015-05-15,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1629220 DEDIBOX 1629220,2,,2015-05-15,SEPA ONLINE SAS ONL 1629220 DEDIBOX 1629220
+2015-05-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
 2015-05-11,creditmutuel,-7.73,"FACTURE SGT15060310002982 DONT TVA 0,38EUR",0,,2015-05-11,"FACTURE SGT15060310002982 DONT TVA 0,38EUR"
+2015-05-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
 2015-04-29,creditmutuel,70.00,VIR DRFIP D AQUITAINE ET GIR 1D0330000-2015ENMADM-MDT0002924-000 FACTURE N? 2014112701 DU 26/03/2015 INTERVENTION DU 27/11/2014 A PARIS,1,,2015-04-29,DRFIP D AQUITAINE ET GIR 1D0330000-2015ENMADM-MDT0002924-000 FACTURE N? 2014112701 DU 26/03/2015 INTERVENTION DU 27/11/2014 A PARIS
+2015-04-26,paypal,14.24,Don de H.C.,0,-0.76,,"Don de H.C. (€15,00)"
+2015-04-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
+2015-04-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
+2015-04-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-04-02,paypal,9.41,Don de F.L.,0,-0.59,,"Don de F.L. (€10,00)"
+2015-04-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-03-24,paypal,9.41,Don de R.P.,0,-0.59,,"Don de R.P. (€10,00)"
+2015-03-17,paypal,2.65,Paiement récurrent de A.M.,0,-0.35,,"Paiement récurrent de A.M. (€3,00)"
+2015-03-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
+2015-03-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-03-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-02-11,paypal,9.41,Paiement récurrent de n.l.,0,-0.59,,"Paiement récurrent de n.l. (€10,00)"
+2015-02-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2015-02-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-01-05,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-01-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2014-12-27,paypal,96.35,Don de C.G.,0,-3.65,,"Don de C.G. (€100,00)"
+2014-12-26,paypal,-7.19,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-12-24,paypal,28.73,Don de D.C.,0,-1.27,,"Don de D.C. (€30,00)"
+2014-12-09,paypal,144.65,Don de G.D.,0,-5.35,,"Don de G.D. (€150,00)"
+2014-12-01,paypal,48.05,Don de A.M.,0,-1.95,,"Don de A.M. (€50,00)"
+2014-12-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-11-30,paypal,-28.80,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2014-11-28,paypal,19.07,Don de J.M.,0,-0.93,,"Don de J.M. (€20,00)"
+2014-11-05,paypal,48.05,Don de A.D.,0,-1.95,,"Don de A.D. (€50,00)"
+2014-11-03,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-10-21,paypal,192.95,Don de A.C.,0,-7.05,,"Don de A.C. (€200,00)"
+2014-10-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2014-10-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-09-23,paypal,11.34,Don de H.B.,0,-0.66,,"Don de H.B. (€12,00)"
+2014-09-16,paypal,-28.80,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2014-09-08,paypal,19.07,Don de A.P.,0,-0.93,,"Don de A.P. (€20,00)"
+2014-09-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2014-09-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-08-15,paypal,19.07,Don de E.L.,0,-0.93,,"Don de E.L. (€20,00)"
+2014-08-06,paypal,1.68,Paiement récurrent de A.K.,0,-0.32,,"Paiement récurrent de A.K. (€2,00)"
+2014-08-04,paypal,4.58,Paiement récurrent de l.l.,0,-0.42,,"Paiement récurrent de l.l. (€5,00)"
+2014-08-03,paypal,4.58,Don de J.l.,0,-0.42,,"Don de J.l. (€5,00)"
+2014-08-03,paypal,14.24,Don de J.Q.,0,-0.76,,"Don de J.Q. (€15,00)"
+2014-08-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-07-31,paypal,19.07,Don de M.T.,0,-0.93,,"Don de M.T. (€20,00)"
+2014-07-29,paypal,9.41,Don de D.P.,0,-0.59,,"Don de D.P. (€10,00)"
+2014-07-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-06-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2014-06-02,paypal,-125.07,Paiement à COMO-ESTAS,0,0.00,,Paiement à COMO-ESTAS
+2014-04-17,paypal,96.35,Don de P.L.,0,-3.65,,"Don de P.L. (€100,00)"
+2014-04-12,paypal,14.24,Don de d.g.,0,-0.76,,"Don de d.g. (€15,00)"
+2014-01-19,paypal,48.05,Don de D.L.,0,-1.95,,"Don de D.L. (€50,00)"
+2014-01-05,paypal,48.05,Don de Y.S.,0,-1.95,,"Don de Y.S. (€50,00)"
+2013-12-23,paypal,-59.76,Paiement à Gandi,0,0.00,,Paiement à Gandi
+2013-12-20,paypal,-36.76,Paiement à COMO-ESTAS,0,0.00,,Paiement à COMO-ESTAS
+2013-12-19,paypal,192.95,Don de A.C.,0,-7.05,,"Don de A.C. (€200,00)"
+2013-10-20,paypal,-247.07,Paiement à Gandi,0,0.00,,Paiement à Gandi
+2013-09-09,paypal,144.65,Don de J.B.,0,-5.35,,"Don de J.B. (€150,00)"
+2013-06-23,paypal,48.05,Don de M.K.,0,-1.95,,"Don de M.K. (€50,00)"
+2013-06-23,paypal,19.07,Don de J.P.,0,-0.93,,"Don de J.P. (€20,00)"
+2013-06-19,paypal,28.73,Don de N.H.,0,-1.27,,"Don de N.H. (€30,00)"
+2013-06-12,paypal,96.35,Don de P.L.,0,-3.65,,"Don de P.L. (€100,00)"
+2013-04-20,paypal,9.41,Don de R.G.,0,-0.59,,"Don de R.G. (€10,00)"
+2013-02-17,paypal,-29.90,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2012-11-04,paypal,-133.95,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2012-09-14,paypal,1.68,Don de A.C.,0,-0.32,,"Don de A.C. (€2,00)"
+2012-08-31,paypal,9.41,Don de H.S.,0,-0.59,,"Don de H.S. (€10,00)"
+2012-08-31,paypal,28.73,Don de R.M.,0,-1.27,,"Don de R.M. (€30,00)"
+2012-08-31,paypal,14.24,Don de G.L.,0,-0.76,,"Don de G.L. (€15,00)"
+2012-08-28,paypal,4.58,Don de r.m.,0,-0.42,,"Don de r.m. (€5,00)"
+2012-08-27,paypal,9.41,Don de F.S.,0,-0.59,,"Don de F.S. (€10,00)"
+2012-08-27,paypal,2.65,Don de A.G.,0,-0.35,,"Don de A.G. (€3,00)"
+2012-08-01,paypal,9.41,Don de C.C.,0,-0.59,,"Don de C.C. (€10,00)"
+2012-07-27,paypal,-28.70,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2012-06-21,paypal,19.07,Don de C.C.,0,-0.93,,"Don de C.C. (€20,00)"
+2012-06-19,paypal,144.65,Don de C.S.,0,-5.35,,"Don de C.S. (€150,00)"
+2012-06-11,paypal,48.05,Don de c.g.,0,-1.95,,"Don de c.g. (€50,00)"
+2012-06-07,paypal,9.41,Don de g.b.,0,-0.59,,"Don de g.b. (€10,00)"
+2012-05-28,paypal,19.07,Don de J.B.,0,-0.93,,"Don de J.B. (€20,00)"
+2012-05-22,paypal,19.07,Don de F.C.,0,-0.93,,"Don de F.C. (€20,00)"
+2012-02-17,paypal,9.41,Don de s.d.,0,-0.59,,"Don de s.d. (€10,00)"
+2012-02-08,paypal,144.65,Don de P.L.,0,-5.35,,"Don de P.L. (€150,00)"
+2012-01-09,paypal,-14.35,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2011-12-30,paypal,4.58,Don de B.R.,0,-0.42,,"Don de B.R. (€5,00)"
+2011-12-18,paypal,14.24,Don de L.B.,0,-0.76,,"Don de L.B. (€15,00)"
+2011-12-11,paypal,-14.35,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2011-12-01,paypal,48.05,Don de A.A.,0,-1.95,,"Don de A.A. (€50,00)"
+2011-11-08,paypal,-43.06,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2011-11-05,paypal,-58.01,Paiement à GANDI SAS,0,0.00,,Paiement à GANDI SAS
+2011-09-22,paypal,48.05,Don de C.V.,0,-1.95,,"Don de C.V. (€50,00)"
+2011-09-01,paypal,38.39,Don de L.M.,0,-1.61,,"Don de L.M. (€40,00)"
+2011-08-06,paypal,4.58,Don de A.F.,0,-0.42,,"Don de A.F. (€5,00)"
+2011-08-05,paypal,38.39,Don de D.M.,0,-1.61,,"Don de D.M. (€40,00)"
+2011-06-28,paypal,48.05,Don de A.C.,0,-1.95,,"Don de A.C. (€50,00)"
+2011-03-17,paypal,9.41,Don de T.J.,0,-0.59,,"Don de T.J. (€10,00)"
+2011-03-17,paypal,14.24,Don de T.F.,0,-0.76,,"Don de T.F. (€15,00)"
+2011-01-17,paypal,28.73,Don de D.M.,0,-1.27,,"Don de D.M. (€30,00)"
+2010-08-12,paypal,14.24,Don de J.L.,0,-0.76,,"Don de J.L. (€15,00)"
+2009-12-08,paypal,4.58,Don de m.f.,0,-0.42,,"Don de m.f. (€5,00)"
+2009-11-23,paypal,0.72,Don de B.O.,0,-0.28,,"Don de B.O. (€1,00)"
