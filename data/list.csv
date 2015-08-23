@@ -1,2 +1,2 @@
-id,label,currency,type,balance,coming
-creditmutuel,C/C Eurocompte Asso Tranquillité Regards Citoyens,EUR,1,6387.92,-125.98
+id,label,balance,currency,coming,type
+creditmutuel,C/C Eurocompte Asso Tranquillité Regards Citoyens,6387.92,EUR,-125.98,1
