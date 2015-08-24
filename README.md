@@ -23,6 +23,17 @@ bin/install.sh
 bin/update_data.sh
 ```
 
+## Install in crontab for autoupdates
+
+To run automatically every hour for instance, add a line like this to your crontabs where $INSTALLPATH is the current repository:
+
+` 00 * * * * $INSTALLPATH/bin/update_data.sh`
+
+If your server uses Python2.6, you're likely to have issues with PayPal executing javascript which Python implementation is not 2.6-compatible.
+A fallback workaround is to install [nodeJs](https://nodejs.org/), locate it (`which node` for instance) and add its PATH to the PATH used within crontabs as suchi (e.g. if node is installed in `/usr/bin`):
+
+` 00 * * * * PATH=$PATH:/usr/bin $INSTALLPATH/bin/update_data.sh`
+
 ## Développement
 
 - Exécution sans autocommit
@@ -36,11 +47,13 @@ bin/update_data.sh nocommit
 Weboob est installé dans le virtualenv `boobankRC`. Il faut donc l'activer:
 
 ```bash
-# D'ordinaire les envs sont installés dans $HOME/.virtualenvs
-~/.virtualenvs/boobankRC/bin/activate
+# sourcing config.inc should do the trick
+source config.inc
 # ou avec virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 workon boobankRC
+# Autrement d'ordinaire les envs sont installés dans $HOME/.virtualenvs
+~/.virtualenvs/boobankRC/bin/activate
 ```
 
 ## Reset bank account logins
