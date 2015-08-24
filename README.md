@@ -23,6 +23,12 @@ bin/install.sh
 bin/update_data.sh
 ```
 
+Si weboob n'a pas été installé globalement, il faut veiller à ce que la variable d'environnement PYTHONPATH pointe vers l'installation locale. Par exemple :
+
+```
+PYTHONPATH=~/.local/lib/python2.7/site-packages/ bash bin/update_date.sh
+```
+
 ## Développement
 
 - Exécution sans autocommit
