@@ -13,7 +13,7 @@ else
   done
 fi
 echo "source $VEWR ||
- ( echo 'Error: could not find virtualenvwrapper.sh, please try to locate it and change it in "config.inc"' && exit 1 )
+ ( echo 'Error: could not find virtualenvwrapper.sh, please try to locate it and change it in config.inc' && exit 1 )
 workon boobankRC" > config.inc
 
 mkvirtualenv --no-site-packages boobankRC ||
@@ -66,7 +66,7 @@ weboob-config update > /tmp/weboob-config.update.log 2>&1 ||
 echo
 echo '__________________________________'
 echo "Install finished!"
-echo 'Use source "'$VEWR' && workon boobankRC" to activate virtualenv and use weboob features such as "boobank list" or "boobank history".'
+echo 'Use "source config.inc" to activate virtualenv and use weboob features such as "boobank list" or "boobank history".'
 
 # Generate config.inc from boobank list
 echo

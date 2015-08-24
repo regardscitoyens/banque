@@ -58,8 +58,7 @@ workon boobankRC
 
 ## Reset bank account logins
 ```bash
-source /usr/local/bin/virtualenvwrapper.sh
-workon boobankRC
+source config.inc
 weboob-config add creditmutuel
 weboob-config add paypal
 ```
