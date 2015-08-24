@@ -11,7 +11,7 @@ L'export est réalisé grace aux plugins [creditmutuel](http://weboob.org/module
 
 ```bash
 # install dependencies
-sudo apt-get -q install git python-pip
+sudo apt-get -q install git python-pip spidermonkey-bin
 sudo pip install -q virtualenv virtualenvwrapper
 # run installer
 bin/install.sh
