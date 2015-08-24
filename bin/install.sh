@@ -4,8 +4,18 @@ cd $(dirname $0)/..
 
 echo
 echo "- Create boobankRC virtualenv using virtualenvwrapper"
-source /usr/local/bin/virtualenvwrapper.sh ||
- ( echo "Error: could not find virtualenvwrapper.sh" && exit 1 )
+VEWR=$(which virtualenvwrapper.sh)
+if [ ! -z "$VEWR" ]; then
+  source $VEWR
+else
+  for vewpath in /usr/local/bin/virtualenwrapper.sh /usr/bin/virtualenvwrapper.sh /usr/share/virtualenwrapper/virtualenvwrapper.sh; do
+    source $vewpath && VEWR=$vewpath && break
+  done
+fi
+echo "source $VEWR ||
+ ( echo 'Error: could not find virtualenvwrapper.sh, please try to locate it and change it in `config.inc`' && exit 1 )
+workon boobankRC" > config.inc
+
 mkvirtualenv --no-site-packages boobankRC ||
  ( echo "Error: could not create virtualenv boobankRC" && exit 1 )
 
@@ -67,7 +77,7 @@ cat /tmp/boobank.list
 cat /tmp/boobank.list |
  grep "@" |
  awk '{print $1}' |
- awk -F '@' '{print toupper($2)"="$1"@"$2}' > config.inc
+ awk -F '@' '{print toupper($2)"="$1"@"$2}' >> config.inc
 source config.inc
 echo '__________________________________'
 echo 'CREDIT MUTUEL History:'

@@ -1,11 +1,7 @@
 #!/bin/bash
 
 cd $(dirname $0)/..
-source /usr/local/bin/virtualenvwrapper.sh ||
- ( echo "Error: could not find virtualenvwrapper.sh" && exit 1 )
-workon boobankRC
-
-source config.inc
+source config.inc || exit 1
 
 # Collect and format details on all accounts
 boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
