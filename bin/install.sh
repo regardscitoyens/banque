@@ -8,12 +8,12 @@ VEWR=$(which virtualenvwrapper.sh)
 if [ ! -z "$VEWR" ]; then
   source $VEWR
 else
-  for vewpath in /usr/local/bin/virtualenwrapper.sh /usr/bin/virtualenvwrapper.sh /usr/share/virtualenwrapper/virtualenvwrapper.sh; do
-    source $vewpath && VEWR=$vewpath && break
+  for vewpath in /usr/local/bin/virtualenwrapper.sh /usr/bin/virtualenvwrapper.sh /usr/share/virtualenwrapper/virtualenvwrapper.sh /etc/bash_completion.d/virtualenvwrapper; do
+    source $vewpath 2> /dev/null && VEWR=$vewpath && break
   done
 fi
 echo "source $VEWR ||
- ( echo 'Error: could not find virtualenvwrapper.sh, please try to locate it and change it in `config.inc`' && exit 1 )
+ ( echo 'Error: could not find virtualenvwrapper.sh, please try to locate it and change it in "config.inc"' && exit 1 )
 workon boobankRC" > config.inc
 
 mkvirtualenv --no-site-packages boobankRC ||
@@ -66,7 +66,7 @@ weboob-config update > /tmp/weboob-config.update.log 2>&1 ||
 echo
 echo '__________________________________'
 echo "Install finished!"
-echo 'Use source "/usr/local/bin/virtualenvwrapper.sh && workon boobankRC" to activate virtualenv and use weboob features such as "boobank list" or "boobank history".'
+echo 'Use source "'$VEWR' && workon boobankRC" to activate virtualenv and use weboob features such as "boobank list" or "boobank history".'
 
 # Generate config.inc from boobank list
 echo
