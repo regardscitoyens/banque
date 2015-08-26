@@ -26,9 +26,7 @@ pip install -q csvkit PyExecJS virtualenvwrapper ||
 
 echo
 echo "- Install weboob for the env"
-# Temporarily use local weboob with fixed paypal until merged
-#git clone git://git.symlink.me/pub/weboob/stable.git weboob ||
-git clone https://github.com/RouxRC/weboob.git -b paypal-commissions weboob ||
+git clone git://git.symlink.me/pub/weboob/devel.git weboob ||
  ( echo "Error: could not clone weboob git directory" && exit 1 )
 cd weboob
 echo "installing..."
