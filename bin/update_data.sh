@@ -31,7 +31,7 @@ cat data/history.csv data/.history.*@*.csv | sort -ur > data/.history.csv.tmp
 mv data/.history.csv.tmp data/history.csv
 
 # Auto commit if not debugging
-if ! test "$1" = "nocommit" && [ -s data/list.csv ] && [ -s data/.history.${CREDITMUTUEL}.csv ] && [ -s data/.history.${PAYPAL}.csv ]; then
+if ! test "$1" = "nocommit" && [ `cat data/list.csv | wc -l` -eq 3 ] && [ -s data/.history.${CREDITMUTUEL}.csv ] && [ -s data/.history.${PAYPAL}.csv ]; then
   git add data/list.csv data/history.csv
   if git commit -m "update bank situation" > /dev/null ; then
     git pull origin master
