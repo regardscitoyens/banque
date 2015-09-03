@@ -34,22 +34,28 @@ date,id,amount,raw,type,commission,vdate,label
 2015-04-26,paypal,14.24,Don de H.C.,0,-0.76,,"Don de H.C. (€15,00)"
 2015-04-17,paypal,2.65,Don récurrent de A.M.,0,-0.35,,"Don récurrent de A.M. (€3,00)"
 2015-04-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2015-04-10,creditmutuel,-7.73,"FACTURE SGT15060310002376 DONT TVA 0,38EUR",,,,"FACTURE SGT15060310002376 DONT TVA 0,38EUR"
 2015-04-04,paypal,4.58,Don récurrent de l.l.,0,-0.42,,"Don récurrent de l.l. (€5,00)"
 2015-04-02,paypal,9.41,Don de F.L.,0,-0.59,,"Don de F.L. (€10,00)"
 2015-04-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2015-03-24,paypal,9.41,Don de R.P.,0,-0.59,,"Don de R.P. (€10,00)"
 2015-03-17,paypal,2.65,Don récurrent de A.M.,0,-0.35,,"Don récurrent de A.M. (€3,00)"
 2015-03-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2015-03-10,creditmutuel,-7.73,"FACTURE SGT15060310001688 DONT TVA 0,38EUR",,,,"FACTURE SGT15060310001688 DONT TVA 0,38EUR"
 2015-03-04,paypal,4.58,Don récurrent de l.l.,0,-0.42,,"Don récurrent de l.l. (€5,00)"
+2015-03-03,creditmutuel,-32.48,PAIEMENT CB 0203 PARIS GANDI CARTE 45528184,,,,PAIEMENT CB 0203 PARIS GANDI CARTE 45528184
 2015-03-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2015-02-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2015-02-10,creditmutuel,-7.73,"FACTURE SGT15060310001129 DONT TVA 0,38EUR",,,,"FACTURE SGT15060310001129 DONT TVA 0,38EUR"
 2015-02-04,paypal,4.58,Don récurrent de l.l.,0,-0.42,,"Don récurrent de l.l. (€5,00)"
 2015-02-02,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2015-01-12,creditmutuel,-7.73,"FACTURE SGT15060310000532 DONT TVA 0,38EUR",,,,"FACTURE SGT15060310000532 DONT TVA 0,38EUR"
 2015-01-05,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2015-01-04,paypal,4.58,Don récurrent de l.l.,0,-0.42,,"Don récurrent de l.l. (€5,00)"
 2014-12-27,paypal,96.35,Don de C.G.,0,-3.65,,"Don de C.G. (€100,00)"
 2014-12-26,paypal,-7.19,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2014-12-24,paypal,28.73,Don de D.C.,0,-1.27,,"Don de D.C. (€30,00)"
+2014-12-10,creditmutuel,-7.73,"FACTURE SGT14060310006949 DONT TVA 0,38EUR",,,,"FACTURE SGT14060310006949 DONT TVA 0,38EUR"
 2014-12-09,paypal,144.65,Don de G.D.,0,-5.35,,"Don de G.D. (€150,00)"
 2014-12-01,paypal,48.05,Don de A.M.,0,-1.95,,"Don de A.M. (€50,00)"
 2014-12-01,paypal,-125.98,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
