@@ -18,7 +18,7 @@ for BANKID in $CREDITMUTUEL $PAYPAL; do
    ( echo "ERROR collecting history for $BANKID" && cat /tmp/boobank.${BANKID}.history.log && exit 1 )
   cat data/.history.${BANKID}.csv.tmp |
    sed 's/^[0-9A-Z]*@//' |
-   sed 's/ 00:00:00//g' |
+   sed 's/ [0-2][0-9]:[0-5][0-9]:[0-5][0-9];/;/g' |
    sed -r 's/Not (available|loaded)//g' |
    sed -r 's/Paiement récurrent de /Don récurrent de /g' |
    sed -r 's/(Don( récurrent)? de )(\w)[^; ]+( (\w)[^; ]+)*?(;| \(€)/\1\3.\5.\6/g' |
