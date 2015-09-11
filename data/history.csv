@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2015-09-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
 2015-09-10,creditmutuel,-7.78,"FACTURE SGT15060310005683 DONT TVA 0,38EUR",0,,2015-09-01,"FACTURE SGT15060310005683 DONT TVA 0,38EUR"
 2015-09-09,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1753283 DEDIBOX 1753283,2,,2015-09-09,SEPA ONLINE SAS ONL 1753283 DEDIBOX 1753283
 2015-09-04,paypal,48.05,Don de H.B.,0,-1.95,,"Don de H.B. (€50,00)"
