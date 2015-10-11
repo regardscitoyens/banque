@@ -1,4 +1,7 @@
 date,id,amount,raw,type,commission,vdate,label
+2015-10-12,paypal,-14.40,Paiement à Gandi,0,0.00,,Paiement à Gandi
+2015-10-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2015-10-08,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1787153 DEDIBOX 1787153,2,,2015-10-08,SEPA ONLINE SAS ONL 1787153 DEDIBOX 1787153
 2015-10-01,paypal,144.65,Don de S.T.,0,-5.35,,"Don de S.T. (€150,00)"
 2015-09-17,paypal,2.65,Don récurrent de A.M.,0,-0.35,,"Don récurrent de A.M. (€3,00)"
 2015-09-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
