@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2015-12-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
 2015-12-10,creditmutuel,-7.78,"FACTURE SGT15060310008388 DONT TVA 0,38EUR",0,,2015-12-01,"FACTURE SGT15060310008388 DONT TVA 0,38EUR"
 2015-12-08,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1854406 DEDIBOX 1854406,2,,2015-12-08,SEPA ONLINE SAS ONL 1854406 DEDIBOX 1854406
 2015-12-04,paypal,482.75,Don de A.C.,0,-17.25,,"Don de A.C. (€500,00)"
