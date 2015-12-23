@@ -1,5 +1,6 @@
 date,id,amount,raw,type,commission,vdate,label
 2015-12-23,paypal,96.35,Don de C.G.,0,-3.65,,"Don de C.G. (€100,00)"
+2015-12-22,paypal,96.35,Don de C.G.,0,-3.65,,"Don de C.G. (€100,00)"
 2015-12-17,paypal,2.65,Don récurrent de A.T.,0,-0.35,,"Don récurrent de A.T. (€3,00)"
 2015-12-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
 2015-12-10,creditmutuel,-7.78,"FACTURE SGT15060310008388 DONT TVA 0,38EUR",0,,2015-12-01,"FACTURE SGT15060310008388 DONT TVA 0,38EUR"
