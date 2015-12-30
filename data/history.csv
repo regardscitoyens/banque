@@ -1,4 +1,26 @@
+id;date;rdate;vdate;type;raw;category;label;amount;card;commission;original_amount;original_currency;country;investments
 date,id,amount,raw,type,commission,vdate,label
+@creditmutuel;2015-12-10;2015-12-10;2015-12-01;0;FACTURE SGT15060310008388 DONT TVA 0,38EUR;Not available;FACTURE SGT15060310008388 DONT TVA 0,38EUR;-7.78;Not loaded;Not loaded;Not loaded;Not loaded;Not loaded;[]
+@creditmutuel;2015-12-08;2015-12-08;2015-12-08;2;PRLV SEPA ONLINE SAS ONL 1854406 DEDIBOX 1854406;Not available;SEPA ONLINE SAS ONL 1854406 DEDIBOX 1854406;-125.98;Not loaded;Not loaded;Not loaded;Not loaded;Not loaded;[]
+@creditmutuel;2015-11-11;2015-11-11;2015-11-11;2;PRLV SEPA ONLINE SAS ONL 1821050 DEDIBOX 1821050;Not available;SEPA ONLINE SAS ONL 1821050 DEDIBOX 1821050;-125.98;Not loaded;Not loaded;Not loaded;Not loaded;Not loaded;[]
+@creditmutuel;2015-11-10;2015-11-10;2015-11-01;0;FACTURE SGT15060310007385 DONT TVA 0,38EUR;Not available;FACTURE SGT15060310007385 DONT TVA 0,38EUR;-7.78;Not loaded;Not loaded;Not loaded;Not loaded;Not loaded;[]
+9KD45515JE5613213@paypal;2015-12-22 00:00:00;2015-12-22 00:00:00;Not available;0;Don de Claude GUENEAU;Not available;Don de Claude GUENEAU;96.35;Not loaded;-3.65;Not loaded;Not loaded;Not loaded;[]
+8HL51329R3627035X@paypal;2015-10-27 00:00:00;2015-10-27 00:00:00;Not available;0;Don de Stéphane Péneau;Not available;Don de Stéphane Péneau;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
+88U488076Y6970547@paypal;2015-12-04 00:00:00;2015-12-04 00:00:00;Not available;0;Don de Anne CHAILLEU;Not available;Don de Anne CHAILLEU;482.75;Not loaded;-17.25;Not loaded;Not loaded;Not loaded;[]
+7AU33453EH0311254@paypal;2015-10-11 00:00:00;2015-10-11 00:00:00;Not available;0;Paiement récurrent de nicolas lebois;Not available;Paiement récurrent de nicolas lebois;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
+6Y102973RN2230549@paypal;2015-11-17 00:00:00;2015-11-17 00:00:00;Not available;0;Paiement récurrent de Antoine Morandeau;Not available;Paiement récurrent de Antoine Morandeau;2.65;Not loaded;-0.35;Not loaded;Not loaded;Not loaded;[]
+6SM86072EJ918851B@paypal;2015-09-04 00:00:00;2015-09-04 00:00:00;Not available;0;Paiement récurrent de laurent lagrue;Not available;Paiement récurrent de laurent lagrue;4.58;Not loaded;-0.42;Not loaded;Not loaded;Not loaded;[]
+6F159793C6134712J@paypal;2015-12-25 00:00:00;2015-12-25 00:00:00;Not available;0;Don de Pascal Levasseur;Not available;Don de Pascal Levasseur;96.35;Not loaded;-3.65;Not loaded;Not loaded;Not loaded;[]
+68X077323N912934S@paypal;2015-12-25 00:00:00;2015-12-25 00:00:00;Not available;0;Don de FRANCOIS-REGIS DOUSSET;Not available;Don de FRANCOIS-REGIS DOUSSET;49.98;Not loaded;-2.02;Not loaded;Not loaded;Not loaded;[]
+59080529BK562094H@paypal;2015-09-04 00:00:00;2015-09-04 00:00:00;Not available;0;Don de Hervé de Caumia Baillenx;Not available;Don de Hervé de Caumia Baillenx;48.05;Not loaded;-1.95;Not loaded;Not loaded;Not loaded;[]
+505780319E650682D@paypal;2015-09-17 00:00:00;2015-09-17 00:00:00;Not available;0;Paiement récurrent de Antoine Morandeau;Not available;Paiement récurrent de Antoine Morandeau;2.65;Not loaded;-0.35;Not loaded;Not loaded;Not loaded;[]
+4NN0891854775612R@paypal;2015-10-17 00:00:00;2015-10-17 00:00:00;Not available;0;Paiement récurrent de Antoine Morandeau;Not available;Paiement récurrent de Antoine Morandeau;2.65;Not loaded;-0.35;Not loaded;Not loaded;Not loaded;[]
+47G65438WN761552M@paypal;2015-11-08 00:00:00;2015-11-08 00:00:00;Not available;0;Achat de GANDI SAS;Not available;Achat de GANDI SAS;-14.40;Not loaded;0.00;Not loaded;Not loaded;Not loaded;[]
+46E97410M84220341@paypal;2015-10-11 00:00:00;2015-10-11 00:00:00;Not available;0;Achat de GANDI SAS;Not available;Achat de GANDI SAS;-14.40;Not loaded;0.00;Not loaded;Not loaded;Not loaded;[]
+46B04850T2412242C@paypal;2015-11-23 00:00:00;2015-11-23 00:00:00;Not available;0;Don de Antoine CARME;Not available;Don de Antoine CARME;28.73;Not loaded;-1.27;Not loaded;Not loaded;Not loaded;[]
+45G29385U93289429@paypal;2015-09-11 00:00:00;2015-09-11 00:00:00;Not available;0;Paiement récurrent de nicolas lebois;Not available;Paiement récurrent de nicolas lebois;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
+3GT55084VU1564242@paypal;2015-12-11 00:00:00;2015-12-11 00:00:00;Not available;0;Paiement récurrent de nicolas lebois;Not available;Paiement récurrent de nicolas lebois;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
+2RV52295L1808823X@paypal;2015-10-01 00:00:00;2015-10-01 00:00:00;Not available;0;Don de Sylvie TESSIER;Not available;Don de Sylvie TESSIER;144.65;Not loaded;-5.35;Not loaded;Not loaded;Not loaded;[]
 2015-12-25,paypal,96.35,Don de P.L.,0,-3.65,,"Don de P.L. (€100,00)"
 2015-12-25,paypal,49.98,Don de F.D.,0,-2.02,,"Don de F.D. (€52,00)"
 2015-12-22,paypal,96.35,Don de C.G.,0,-3.65,,"Don de C.G. (€100,00)"
@@ -186,3 +208,6 @@ date,id,amount,raw,type,commission,vdate,label
 2010-08-12,paypal,14.24,Don de J.L.,0,-0.76,,"Don de J.L. (€15,00)"
 2009-12-08,paypal,4.58,Don de m.f.,0,-0.42,,"Don de m.f. (€5,00)"
 2009-11-23,paypal,0.72,Don de B.O.,0,-0.28,,"Don de B.O. (€1,00)"
+1PE52745XN1749603@paypal;2015-12-17 00:00:00;2015-12-17 00:00:00;Not available;0;Paiement récurrent de Antoine Teillant;Not available;Paiement récurrent de Antoine Teillant;2.65;Not loaded;-0.35;Not loaded;Not loaded;Not loaded;[]
+131908490S045842W@paypal;2015-11-30 00:00:00;2015-11-30 00:00:00;Not available;0;Paiement récurrent de Damien Marié;Not available;Paiement récurrent de Damien Marié;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
+0NU627829W648761J@paypal;2015-11-11 00:00:00;2015-11-11 00:00:00;Not available;0;Paiement récurrent de nicolas lebois;Not available;Paiement récurrent de nicolas lebois;9.41;Not loaded;-0.59;Not loaded;Not loaded;Not loaded;[]
