@@ -15,5 +15,7 @@ if __name__ == "__main__":
     if data[10] and data[10] not in ['commission', '0.00']:
         data[7] += (u' (€%.2f)' % (float(data[8]) - float(data[10]))).replace('.', ',')
         line = ';'.join(data)
-    sys.stdout.write(line.encode('utf-8'))
+    # Only keep lines with definitive date to avoid duplicates across multiple dates
+    if data[1].endswith(' 00:00:00'):
+        sys.stdout.write(line.encode('utf-8'))
 

@@ -20,6 +20,7 @@ for BANKID in $CREDITMUTUEL $PAYPAL; do
    bin/format_bankline.py |
    csvcut -d ";" -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv
   rm -f data/.history.${BANKID}.csv.tmp
+  #mv data/.history.${BANKID}.csv.tmp data/.history.${BANKID}.$(date +%y%m%d-%H%M).tmp
 done
 
 # Merge new entries into global history
