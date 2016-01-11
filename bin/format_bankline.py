@@ -16,6 +16,6 @@ if __name__ == "__main__":
         data[7] += (u' (€%.2f)' % (float(data[8]) - float(data[10]))).replace('.', ',')
         line = ';'.join(data)
     # Only keep lines with definitive date to avoid duplicates across multiple dates
-    if data[1].endswith(' 00:00:00'):
+    if data[1] == "date" or len(data[1]) == 10 or data[1].endswith(' 00:00:00'):
         sys.stdout.write(line.encode('utf-8'))
 
