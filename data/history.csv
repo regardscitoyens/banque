@@ -1,4 +1,6 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-01-11,creditmutuel,-7.78,"FACTURE SGT16060310000671 DONT TVA 0,38EUR",0,,2016-01-01,"FACTURE SGT16060310000671 DONT TVA 0,38EUR"
+2016-01-11,creditmutuel,-125.98,PRLV SEPA ONLINE SAS ONL 1888033 DEDIBOX 1888033,2,,2016-01-11,SEPA ONLINE SAS ONL 1888033 DEDIBOX 1888033
 2016-01-02,paypal,-7.19,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2015-12-31,paypal,22.93,Don de H.B.,0,-1.07,,"Don de H.B. (€24,00)"
 2015-12-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
