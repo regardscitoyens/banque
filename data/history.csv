@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-02-17,paypal,2.65,Don récurrent de A.T.,0,-0.35,,"Don récurrent de A.T. (€3,00)"
 2016-02-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
 2016-02-11,creditmutuel,1500.00,VIR MR PERSON BRICE FORMATION ANPTIC BF 24-26 11 2015,1,,2016-02-11,MR PERSON BRICE FORMATION ANPTIC BF 24-26 11 2015
 2016-02-10,creditmutuel,-7.78,"FACTURE SGT16060310001452 DONT TVA 0,38EUR",0,,2016-02-01,"FACTURE SGT16060310001452 DONT TVA 0,38EUR"
