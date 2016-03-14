@@ -1,4 +1,7 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-03-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2016-03-10,creditmutuel,-7.78,"FACTURE SGT16060310002207 DONT TVA 0,38EUR",0,,2016-03-01,"FACTURE SGT16060310002207 DONT TVA 0,38EUR"
+2016-03-08,paypal,3.61,Don de P.S.,0,-0.39,,"Don de P.S. (€4,00)"
 2016-03-02,paypal,9.41,Don de T.B.,0,-0.59,,"Don de T.B. (€10,00)"
 2016-02-29,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2016-02-22,paypal,9.41,Don de A.F.,0,-0.59,,"Don de A.F. (€10,00)"

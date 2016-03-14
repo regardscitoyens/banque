@@ -12,10 +12,10 @@ if __name__ == "__main__":
     line = line.replace(u'Paiement récurrent de ', u'Don récurrent de ')
     line = re.sub(ur'(Don( récurrent)? de )(\w)[^; ]+( (\w)[^; ]+)*?;', r'\1\3.\5.;', line, re.I)
     data = line.split(';')
-    if data[10] and data[10] not in ['commission', '0.00']:
-        data[7] += (u' (€%.2f)' % (float(data[8]) - float(data[10]))).replace('.', ',')
+    if data[11] and data[11] not in ['commission', '0.00']:
+        data[8] += (u' (€%.2f)' % (float(data[9]) - float(data[11]))).replace('.', ',')
         line = ';'.join(data)
     # Only keep lines with definitive date to avoid duplicates across multiple dates
-    if data[1] == "date" or len(data[1]) == 10 or data[1].endswith(' 00:00:00'):
+    if data[2] == "date" or len(data[2]) == 10 or data[2].endswith(' 00:00:00'):
         sys.stdout.write(line.encode('utf-8'))
 
