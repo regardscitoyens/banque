@@ -1,5 +1,6 @@
 date,id,amount,raw,type,commission,vdate,label
 2016-04-23,paypal,19.07,Don de s.d.,0,-0.93,,"Don de s.d. (€20,00)"
+2016-04-23,paypal,14.24,Don de P.A.,0,-0.76,,"Don de P.A. (€15,00)"
 2016-04-17,paypal,2.65,Don récurrent de A.T.,0,-0.35,,"Don récurrent de A.T. (€3,00)"
 2016-04-14,paypal,38.39,Don de j.p.,0,-1.61,,"Don de j.p. (€40,00)"
 2016-04-12,creditmutuel,-380.50,VIR RBSMT FRAIS WE RC LYON,1,,2016-04-12,RBSMT FRAIS WE RC LYON
