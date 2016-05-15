@@ -7,21 +7,20 @@ source config.inc || exit 1
 boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
  ( echo "ERROR collecting list of accounts" && cat /tmp/boobank.list.log && exit 1 )
 cat data/list.csv.tmp                   |
- sed 's/^"[0-9]*EUR@/"/'                |
+ sed -r 's/^("?)[0-9]*EUR@/\1/'         |
  sed -r 's/Not (available|loaded)//g'   |
- grep ";\"EUR\";\|^id"                  |
- csvcut -d ";" -c "id,label,balance,currency,coming,type" > data/list.csv
+ grep ",\"\?EUR\"\?,\|^id"              |
+ csvcut -d "," -c "id,label,balance,currency,coming,type" > data/list.csv
 rm -f data/list.csv.tmp
 
 # Collect and format recent history for each account
 for BANKID in $CREDITMUTUEL $PAYPAL; do
   boobank history -f csv $BANKID -n 20 > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
    ( echo "ERROR collecting history for $BANKID" && cat /tmp/boobank.${BANKID}.history.log && exit 1 )
-  cat data/.history.${BANKID}.csv.tmp   |
-   bin/format_bankline.py               |
-   csvcut -d ";" -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv
-  rm -f data/.history.${BANKID}.csv.tmp
+  bin/format_bankline.py data/.history.${BANKID}.csv.tmp   |
+   csvcut -d "," -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv
   #mv data/.history.${BANKID}.csv.tmp data/.history.${BANKID}.$(date +%y%m%d-%H%M).tmp
+  rm -f data/.history.${BANKID}.csv.tmp
 done
 
 # Merge new entries into global history
