@@ -7,9 +7,9 @@ source config.inc || exit 1
 boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
  ( echo "ERROR collecting list of accounts" && cat /tmp/boobank.list.log && exit 1 )
 cat data/list.csv.tmp                   |
- sed 's/^[0-9]*EUR@//'                  |
+ sed 's/^"[0-9]*EUR@/"/'                |
  sed -r 's/Not (available|loaded)//g'   |
- grep ";EUR;\|^id"                      |
+ grep ";\"EUR\";\|^id"                  |
  csvcut -d ";" -c "id,label,balance,currency,coming,type" > data/list.csv
 rm -f data/list.csv.tmp
 
