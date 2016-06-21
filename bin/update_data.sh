@@ -15,7 +15,7 @@ rm -f data/list.csv.tmp
 
 # Collect and format recent history for each account
 for BANKID in $CREDITMUTUEL $PAYPAL; do
-  boobank history -f csv $BANKID -n 20 > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
+  boobank history -f csv $BANKID -n 20 | grep -v "reconfigure this backend" > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
    ( echo "ERROR collecting history for $BANKID" && cat /tmp/boobank.${BANKID}.history.log && exit 1 )
   bin/format_bankline.py data/.history.${BANKID}.csv.tmp   |
    csvcut -d "," -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv

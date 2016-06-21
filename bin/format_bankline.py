@@ -9,6 +9,8 @@ re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( (\w).*)?$', re.I)
 def process_data(data):
     writer = csv.writer(sys.stdout)
     for line in data:
+        if not line:
+            continue
         if line[0] == 'id':
             writer.writerow(line)
             continue
