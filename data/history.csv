@@ -1,4 +1,9 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-07-13,paypal,19.07,Don de P.M.,0,-0.93,,"Don de P.M. (€20,00)"
+2016-07-11,paypal,9.41,Don récurrent de n.l.,0,-0.59,,"Don récurrent de n.l. (€10,00)"
+2016-07-11,creditmutuel,-7.78,"FACTURE SGT16060310005231 DONT TVA 0,38EUR",0,,2016-07-01,"FACTURE SGT16060310005231 DONT TVA 0,38EUR"
+2016-07-10,creditmutuel,-558.93,VIR RBSMTS BURKINA/LYON/LEMAIRE,1,,2016-07-10,RBSMTS BURKINA/LYON/LEMAIRE
+2016-07-10,creditmutuel,-179.80,VIR RBSMT TOULOUSE THSF,1,,2016-07-10,RBSMT TOULOUSE THSF
 2016-07-08,creditmutuel,-215.96,PRLV SEPA ONLINE SAS ONL 2096567 DEDIBOX 2096567,2,,2016-07-08,SEPA ONLINE SAS ONL 2096567 DEDIBOX 2096567
 2016-07-01,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2016-06-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
