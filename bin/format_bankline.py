@@ -17,6 +17,7 @@ def process_data(data):
         for i, el in enumerate(line):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
+            line[i] = line[i].replace(u'Paiement de ', u'Don de ')
             line[i] = re_ano.sub(r'\1\3.\5.', line[i])
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
