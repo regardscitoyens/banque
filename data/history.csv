@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-09-17,paypal,2.65,Don récurrent de A.T.,0,-0.35,,"Don récurrent de A.T. (€3,00)"
 2016-09-15,paypal,28.73,Don de V.P.,0,-1.27,,"Don de V.P. (€30,00)"
 2016-09-13,creditmutuel,-214.80,VIR RBSMT TRAIN OPL DIGNES,1,,2016-09-13,RBSMT TRAIN OPL DIGNES
 2016-09-13,creditmutuel,-168.10,VIR RBSMT TRAIN OPL DIGNES,1,,2016-09-13,RBSMT TRAIN OPL DIGNES
