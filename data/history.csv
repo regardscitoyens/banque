@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2016-10-02,paypal,4.58,Don de D.V.,0,-0.42,,"Don de D.V. (€5,00)"
 2016-10-01,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2016-09-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2016-09-17,paypal,2.65,Don récurrent de A.T.,0,-0.35,,"Don récurrent de A.T. (€3,00)"
