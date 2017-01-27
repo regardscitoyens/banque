@@ -9,7 +9,7 @@ boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
 cat data/list.csv.tmp                   |
  sed -r 's/^("?)[0-9]*EUR@/\1/'         |
  sed -r 's/Not (available|loaded)//g'   |
- grep ",\"\?EUR\"\?,\|^id"              |
+ grep ";\"\?EUR\"\?;\|^id"              |
  csvcut -d ";" -c "id,label,balance,currency,coming,type" > data/list.csv
 rm -f data/list.csv.tmp
 
