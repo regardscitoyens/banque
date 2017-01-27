@@ -30,4 +30,4 @@ def process_data(data):
 
 if __name__ == "__main__":
     with open(sys.argv[1]) as f:
-        process_data(csv.reader(f))
+        process_data(csv.reader(f, delimiter=";"))
