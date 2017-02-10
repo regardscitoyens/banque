@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2017-02-10,creditmutuel,-7.78,"Cliquer pour déplier ou plier le détail de l'opération FACTURE SGT17060310001338 DONT TVA 0,38EUR",0,,2017-02-01,"Cliquer pour déplier ou plier le détail de l'opération FACTURE SGT17060310001338 DONT TVA 0,38EUR"
 2017-02-09,creditmutuel,-215.96,PRLV SEPA ONLINE SAS ONL 2358740 DEDIBOX 2358740,2,,2017-02-09,SEPA ONLINE SAS ONL 2358740 DEDIBOX 2358740
 2017-02-01,paypal,14.24,Don de P.B.,0,-0.76,,"Don de P.B. (€15,00)"
 2017-01-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
