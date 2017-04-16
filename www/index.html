@@ -1,0 +1,132 @@
+<meta charset="UTF-8">
+
+<script src="js/d3.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/underscore.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/DataTables/datatables.min.css"/>
+<script type="text/javascript" src="js/DataTables/datatables.min.js"></script>
+
+<center>
+    <div id=soldes>
+	<div>Solde Paypal <div id=solde_paypal></div></div>
+	<div>Solde Crédit Mutuel <div id=solde_creditmutuel></div></div>
+    </div>
+    <div id=yearcount>Année </div></br>
+    <table id=table_totals>
+	<tr><td>Total revenus</td><td id='total_revenus'></td></tr>
+	<tr class=detail><td style='padding-left:30px'>Dons</td><td id='total_dons'></td></tr>
+	<tr class=detail><td style='padding-left:30px'>Autres</td><td id='total_autres_revenus'></td></tr>
+	<tr><td>Total dépenses</td><td id='total_depenses'></td></tr>
+    </table><br>
+    <table id="table_accounting">
+</center>
+
+<style>
+ #soldes > div {
+     display:inline-block;
+     padding:20px
+ }
+ #soldes > div > div {
+     font-weight:bold;
+     display:block;
+ }
+ #table_totals tr td:nth-child(2) {
+     text-align:right;
+     padding-left:50px;
+ }
+ #table_totals .detail{
+     opacity:0.6;
+ }
+ #table_accounting {
+     table-layout: fixed;
+     width: 30em;
+ }
+ .dataTables_filter {
+     display:none;
+ }
+ #table_accounting tbody tr.odd,
+ #table_accounting tbody tr.even {
+     background-color: #fff;
+ }
+ #table_accounting tbody tr.odd:hover,
+ #table_accounting tbody tr.even:hover {
+     background-color: #f2f2f2;
+ }
+ #table_accounting tbody tr.depense td {
+     background-color: rgba(255,0,0,.1);
+ }
+ #table_accounting tbody tr.revenu td {
+     background-color: rgba(0,255,0,.1);
+ }
+ #table_accounting td {
+     overflow:hidden;
+     white-space:nowrap;
+     text-overflow: ellipsis;
+     padding-bottom:5px;
+     padding-top:5px;
+ }
+</style>
+
+
+<script type="text/javascript">
+ // Loads balance data
+ d3.csv("https://raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
+     $("#solde_paypal").html(_.filter(data,function (x){return x.id=='paypal';})[0].balance);
+     $("#solde_creditmutuel").html(_.filter(data,function (x){return x.id=='0603100020568901@creditmutuel';})[0].balance);
+ });
+
+ // Loads table data
+ d3.csv("http://raw.githubusercontent.com/regardscitoyens/banque/master/data/history.csv", function(data) {
+     years = _.sortBy(_.uniq(data.map(function(x){return x['date'].slice(0,4);}))).reverse();
+     d3.select("#yearcount").append("select")
+       .on("change",function (x){selectYear(d3.select(this).property('value'));})
+       .selectAll("option").data(years).enter().append("option")
+       .attr("value",function (x){return x}).html(function (x){return x});
+
+     // Initialises table from data
+     table = $('#table_accounting').DataTable( {
+         "data": data.map(function (x) {return [x['date'],(x['amount'])+" €",x['label']];}),
+         "paging": false,
+         "autoWidth":false,
+	 "bFilter":true,
+	 "bInfo": false,
+	 "order": [[ 0, "desc" ]],
+	 "createdRow": function( row, data, dataIndex ) {
+	     $(row).addClass(data[1][0] == '-'?'depense':'revenu')
+	 },
+	 columns:[
+	     {title:"Date",width:'5em'},
+	     {title:"Montant",width:'4.5em'},
+	     {title:"Commentaire",width:'20em'},
+	 ],
+	 "columnDefs": [
+	     {"targets":1,
+	      className: "dt-right"},
+	     {"targets":2,  // prints whole content when ::hover on the last column
+	      "createdCell": function (td, cellData, rowData, row, col) {
+		  $(td).attr("title",cellData);
+	      }}],
+     });
+
+     /* Filter the entry of the table. Updates the totals. */
+     function selectYear(y) {
+	 d=_.filter(data,function(x){return x['date'].slice(0,4)==y;})
+	 function sum(xx){ // Sums a list of csv rows
+	     return Math.round(_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)
+	 }
+	 dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
+	 autres=sum(_.filter(d,function(x){return x['label'].slice(0,4)!='Don ' && x['amount'][0]!='-';}));
+	 depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
+	 $("#total_revenus").html((dons+autres)+" €");
+	 $("#total_dons").html(dons+" €");
+	 $("#total_autres_revenus").html(autres+" €");
+	 $("#total_depenses").html(depenses+" €");
+	 table.column([0]).search(y).draw();
+     }
+
+     selectYear(years[0]);
+
+ });
+
+</script>
