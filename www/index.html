@@ -71,13 +71,13 @@
 
 <script type="text/javascript">
  // Loads balance data
- d3.csv("https://raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
+ d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
      $("#solde_paypal").html(_.filter(data,function (x){return x.id=='paypal';})[0].balance);
      $("#solde_creditmutuel").html(_.filter(data,function (x){return x.id=='0603100020568901@creditmutuel';})[0].balance);
  });
 
  // Loads table data
- d3.csv("http://raw.githubusercontent.com/regardscitoyens/banque/master/data/history.csv", function(data) {
+ d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/history.csv", function(data) {
      years = _.sortBy(_.uniq(data.map(function(x){return x['date'].slice(0,4);}))).reverse();
      d3.select("#yearcount").append("select")
        .on("change",function (x){selectYear(d3.select(this).property('value'));})
