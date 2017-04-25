@@ -93,6 +93,26 @@
 
 
 <script type="text/javascript">
+ // Locale
+ d3.timeFormat = d3.timeFormatLocale({
+     "dateTime": "%A, le %e %B %Y, %X",
+     "date": "%d/%m/%Y",
+     "time": "%H:%M:%S",
+     "periods": ["AM", "PM"],
+     "days": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+     "shortDays": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+     "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+     "shortMonths": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+ }).format;
+
+ d3.format = d3.formatLocale ({
+     "decimal": ".",
+     "thousands": ",",
+     "grouping": [3],
+     "currency": ["", " €"],
+ }).format;
+ var formatCurrency = d3.format("$,.0f");
+
  function drawLineChart(data) {
      var height=150;
      var width=590;
@@ -114,33 +134,22 @@
      yscale = d3.scaleLinear()
 		.domain([0,_.max(data.map(function (x){ return x.balance; }))])
 		.range([height-25,0]);
-     svg.append("path").attr("id","balance_curve")
-	     .attr("d", d3.line()
-			  .x(function (x){return xscale(new Date(x.date));})
-			  .y(function (x){return yscale(x.balance);})(data))
 
-     // Locale
-     var frenchLocale = d3.timeFormatLocale({
-	 "dateTime": "%A, le %e %B %Y, %X",
-	 "date": "%d/%m/%Y",
-	 "time": "%H:%M:%S",
-	 "periods": ["AM", "PM"],
-	 "days": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
-	 "shortDays": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
-	 "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
-	 "shortMonths": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
-     });
+     svg.append("path").attr("id","balance_curve")
+	.attr("d", d3.line()
+		     .x(function (x){return xscale(new Date(x.date));})
+		     .y(function (x){return yscale(x.balance);})(data))
 
      // Axes
      svg.append("g")
-	     .attr("transform","translate("+(width-50)+",0)")
-	     .attr("id","yaxis")
-	     .call(d3.axisRight(yscale).ticks(4).tickFormat(d3.format(",.0r")))
+	.attr("transform","translate("+(width-50)+",0)")
+	.attr("id","yaxis")
+	.call(d3.axisRight(yscale).ticks(4).tickFormat(formatCurrency))
 
      svg.append("g")
-	     .attr("transform","translate(0,"+(height-20)+")")
-	     .attr("id","xaxis")
-	     .call(d3.axisBottom(xscale).ticks(8).tickFormat(frenchLocale.format("%y-%b")))
+	.attr("transform","translate(0,"+(height-20)+")")
+	.attr("id","xaxis")
+	.call(d3.axisBottom(xscale).ticks(8).tickFormat(d3.timeFormat("%y-%b")))
  }
 
  /* Filter the entry of the table. Updates the totals. */
@@ -156,19 +165,19 @@
      depenses_serveur=-sum(_.filter(d,function(x){return x['amount'][0]=='-' &&
 							 (/DEDIBOX/.test(x.label) ||
 							  /Online SAS/.test(x.label));}));
-     $("#total_revenus").html(revenus+" €");
-     $("#total_dons").html(dons+" €");
-     $("#total_autres_revenus").html((revenus-dons)+" €");
-     $("#total_depenses").html(depenses+" €");
-     $("#total_depenses_serveurs").html(depenses_serveur+" €");
-     $("#total_autres_depenses").html((depenses-depenses_serveur)+" €");
+     $("#total_revenus").html(formatCurrency(revenus));
+     $("#total_dons").html(formatCurrency(dons));
+     $("#total_autres_revenus").html(formatCurrency(revenus-dons));
+     $("#total_depenses").html(formatCurrency(depenses));
+     $("#total_depenses_serveurs").html(formatCurrency(depenses_serveur));
+     $("#total_autres_depenses").html(formatCurrency(depenses-depenses_serveur));
      table.column([0]).search(y).draw();
  }
 
  // Loads balance data
  d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
-     $("#solde_paypal").html(_.filter(data,function (x){return x.id=='paypal';})[0].balance);
-     $("#solde_creditmutuel").html(_.filter(data,function (x){return x.id=='0603100020568901@creditmutuel';})[0].balance);
+     $("#solde_paypal").html(formatCurrency(_.filter(data,function (x){return x.id=='paypal';})[0].balance));
+     $("#solde_creditmutuel").html(formatCurrency(_.filter(data,function (x){return x.id=='0603100020568901@creditmutuel';})[0].balance));
  });
 
  // Loads table data
