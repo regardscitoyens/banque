@@ -15,12 +15,17 @@
 	<div>Solde Crédit Mutuel <div id=solde_creditmutuel></div></div>
     </div>
     <div id=yearcount>Année </div></br>
-    <table id=table_totals>
+    <table class=table_totals>
 	<tr><td>Total revenus</td><td id='total_revenus'></td></tr>
-	<tr class=detail><td style='padding-left:30px'>Dons</td><td id='total_dons'></td></tr>
-	<tr class=detail><td style='padding-left:30px'>Autres</td><td id='total_autres_revenus'></td></tr>
+	<tr class=detail><td style='padding-left:20px'>Dons</td><td id='total_dons'></td></tr>
+	<tr class=detail><td style='padding-left:20px'>Autres</td><td id='total_autres_revenus'></td></tr>
+    </table>
+    <table class=table_totals>
 	<tr><td>Total dépenses</td><td id='total_depenses'></td></tr>
-    </table><br>
+	<tr class=detail><td style='padding-left:20px'>Serveurs</td><td id='total_depenses_serveurs'></td></tr>
+	<tr class=detail><td style='padding-left:20px'>Autres</td><td id='total_autres_depenses'></td></tr>
+    </table>
+    <br>
     <table id="table_accounting">
 </center>
 
@@ -45,11 +50,16 @@
      font-weight:bold;
      display:block;
  }
- #table_totals tr td:nth-child(2) {
+ .table_totals {
+     display:inline-block;
+     padding-left:30px;
+     padding-right:30px;
+ }
+ .table_totals tr td:nth-child(2) {
      text-align:right;
      padding-left:50px;
  }
- #table_totals .detail{
+ .table_totals .detail{
      opacity:0.6;
  }
  #table_accounting {
@@ -128,13 +138,18 @@
      function sum(xx){ // Sums a list of csv rows
 	 return Math.round(_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)
      }
+     revenus=sum(_.filter(d,function(x){return x['amount'][0]!='-';}));
      dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
-     autres=sum(_.filter(d,function(x){return x['label'].slice(0,4)!='Don ' && x['amount'][0]!='-';}));
      depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
-     $("#total_revenus").html((dons+autres)+" €");
+     depenses_serveur=-sum(_.filter(d,function(x){return x['amount'][0]=='-' &&
+							 (/DEDIBOX/.test(x.label) ||
+							  /Online SAS/.test(x.label));}));
+     $("#total_revenus").html(revenus+" €");
      $("#total_dons").html(dons+" €");
-     $("#total_autres_revenus").html(autres+" €");
+     $("#total_autres_revenus").html((revenus-dons)+" €");
      $("#total_depenses").html(depenses+" €");
+     $("#total_depenses_serveurs").html(depenses_serveur+" €");
+     $("#total_autres_depenses").html((depenses-depenses_serveur)+" €");
      table.column([0]).search(y).draw();
  }
 
