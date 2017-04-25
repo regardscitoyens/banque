@@ -7,7 +7,9 @@
 <link rel="stylesheet" type="text/css" href="js/DataTables/datatables.min.css"/>
 <script type="text/javascript" src="js/DataTables/datatables.min.js"></script>
 
+
 <center>
+    <svg id="line_chart"/>
     <div id=soldes>
 	<div>Solde Paypal <div id=solde_paypal></div></div>
 	<div>Solde Crédit Mutuel <div id=solde_creditmutuel></div></div>
@@ -23,6 +25,18 @@
 </center>
 
 <style>
+ select {
+     background:#eee;
+     border-radius:7px;
+ }
+ #line_chart #balance_curve {
+     fill:none;
+     stroke:steelblue;
+     stroke-width:1.5px;
+ }
+ #xaxis , #yaxis  {
+     opacity:0.5;
+ }
  #soldes > div {
      display:inline-block;
      padding:20px
@@ -64,12 +78,66 @@
      white-space:nowrap;
      text-overflow: ellipsis;
      padding-bottom:5px;
-     padding-top:5px;
  }
 </style>
 
 
 <script type="text/javascript">
+ function drawLineChart(data) {
+     var height=150;
+     var width=590;
+     svg = d3.select("#line_chart")
+	     .style("width",width)
+	     .style("height",height);
+
+     // fills 'x.balance' for data elements.
+     var current_balance = 0;
+     data.reverse().forEach( function (x) {
+	 current_balance += parseFloat(x.amount);
+	 x.balance = current_balance;
+     });
+
+     // Scales and line
+     xscale = d3.scaleLinear()
+		.domain([new Date(data[0].date),new Date(data[data.length-1].date)])
+		.range([20,width-35]);
+     yscale = d3.scaleLinear()
+		.domain([0,_.max(data.map(function (x){ return x.balance; }))])
+		.range([height-25,0]);
+     svg.append("path").attr("id","balance_curve")
+	     .attr("d", d3.line()
+			  .x(function (x){return xscale(new Date(x.date));})
+			  .y(function (x){return yscale(x.balance);})(data))
+
+     // Axes
+     svg.append("g")
+	     .attr("transform","translate("+(width-30)+",0)")
+	     .attr("id","yaxis")
+	     .call(d3.axisRight(yscale).ticks(4).tickFormat(d3.format(".0s")))
+
+     svg.append("g")
+	     .attr("transform","translate(0,"+(height-20)+")")
+	     .attr("id","xaxis")
+	     .call(d3.axisBottom(xscale).ticks(8).tickFormat(d3.timeFormat("%y-%b")))
+ }
+
+ /* Filter the entry of the table. Updates the totals. */
+ function selectYear(data, y) {
+     d=_.filter(data,function(x){return x['date'].slice(0,4)==y;})
+
+     function sum(xx){ // Sums a list of csv rows
+	 return Math.round(_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)
+     }
+     dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
+     autres=sum(_.filter(d,function(x){return x['label'].slice(0,4)!='Don ' && x['amount'][0]!='-';}));
+     depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
+     $("#total_revenus").html((dons+autres)+" €");
+     $("#total_dons").html(dons+" €");
+     $("#total_autres_revenus").html(autres+" €");
+     $("#total_depenses").html(depenses+" €");
+     table.column([0]).search(y).draw();
+ }
+
  // Loads balance data
  d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
      $("#solde_paypal").html(_.filter(data,function (x){return x.id=='paypal';})[0].balance);
@@ -78,13 +146,8 @@
 
  // Loads table data
  d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/history.csv", function(data) {
-     years = _.sortBy(_.uniq(data.map(function(x){return x['date'].slice(0,4);}))).reverse();
-     d3.select("#yearcount").append("select")
-       .on("change",function (x){selectYear(d3.select(this).property('value'));})
-       .selectAll("option").data(years).enter().append("option")
-       .attr("value",function (x){return x}).html(function (x){return x});
 
-     // Initialises table from data
+     // Initializes table
      table = $('#table_accounting').DataTable( {
          "data": data.map(function (x) {return [x['date'],(x['amount'])+" €",x['label']];}),
          "paging": false,
@@ -109,24 +172,17 @@
 	      }}],
      });
 
-     /* Filter the entry of the table. Updates the totals. */
-     function selectYear(y) {
-	 d=_.filter(data,function(x){return x['date'].slice(0,4)==y;})
-	 function sum(xx){ // Sums a list of csv rows
-	     return Math.round(_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)
-	 }
-	 dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
-	 autres=sum(_.filter(d,function(x){return x['label'].slice(0,4)!='Don ' && x['amount'][0]!='-';}));
-	 depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
-	 $("#total_revenus").html((dons+autres)+" €");
-	 $("#total_dons").html(dons+" €");
-	 $("#total_autres_revenus").html(autres+" €");
-	 $("#total_depenses").html(depenses+" €");
-	 table.column([0]).search(y).draw();
-     }
+     // Initializes year selector
+     years = _.sortBy(_.uniq(data.map(function(x){return x['date'].slice(0,4);}))).reverse();
 
-     selectYear(years[0]);
+     d3.select("#yearcount").append("select")
+       .on("change",function (x){selectYear(data,d3.select(this).property('value'),table);})
+       .selectAll("option").data(years).enter().append("option")
+       .attr("value",function (x){return x}).html(function (x){return x});
 
+
+     selectYear(data,years[0],table);
+     drawLineChart(data);
  });
 
 </script>
