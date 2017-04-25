@@ -111,7 +111,7 @@
      "grouping": [3],
      "currency": ["", " €"],
  }).format;
- var formatCurrency = d3.format("$,.0f");
+ var formatCurrency = d3.format("$,.2f");
 
  function drawLineChart(data) {
      var height=150;
@@ -144,7 +144,7 @@
      svg.append("g")
 	.attr("transform","translate("+(width-50)+",0)")
 	.attr("id","yaxis")
-	.call(d3.axisRight(yscale).ticks(4).tickFormat(formatCurrency))
+	.call(d3.axisRight(yscale).ticks(4).tickFormat(d3.format("$.0r")))
 
      svg.append("g")
 	.attr("transform","translate(0,"+(height-20)+")")
@@ -157,7 +157,7 @@
      d=_.filter(data,function(x){return x['date'].slice(0,4)==y;})
 
      function sum(xx){ // Sums a list of csv rows
-	 return Math.round(_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)
+	 return Math.round(100*_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)/100;
      }
      revenus=sum(_.filter(d,function(x){return x['amount'][0]!='-';}));
      dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
