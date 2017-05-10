@@ -160,7 +160,7 @@
 	 return Math.round(100*_.reduce(xx,function (memo,xxx){return memo+parseFloat(xxx['amount']);},0),4)/100;
      }
      revenus=sum(_.filter(d,function(x){return x['amount'][0]!='-';}));
-     dons=sum(_.filter(d,function(x){return x['label'].slice(0,4)=='Don ';}));
+     dons=sum(_.filter(d,function(x){return /\bDon( r.current)* de\b/i.test(x['label']);}));
      depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
      depenses_serveur=-sum(_.filter(d,function(x){return x['amount'][0]=='-' &&
 							 (/DEDIBOX/.test(x.label) ||
