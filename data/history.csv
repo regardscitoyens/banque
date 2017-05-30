@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2017-05-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2017-05-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2017-05-19,paypal,28.73,Don de G.C.,0,-1.27,,"Don de G.C. (€30,00)"
 2017-05-15,creditmutuel,-7.98,VIR SUZANNE VERGNOLLE,1,,2017-05-15,SUZANNE VERGNOLLE
