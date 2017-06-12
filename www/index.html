@@ -164,6 +164,8 @@
      depenses=-sum(_.filter(d,function(x){return x['amount'][0]=='-';}));
      depenses_serveur=-sum(_.filter(d,function(x){return x['amount'][0]=='-' &&
 							 (/DEDIBOX/.test(x.label) ||
+							  /(Gandi|GANDI SAS)/.test(x.label) ||
+							  /BOOKMYNAME/.test(x.label) ||
 							  /Online SAS/.test(x.label));}));
      $("#total_revenus").html(formatCurrency(revenus));
      $("#total_dons").html(formatCurrency(dons));
