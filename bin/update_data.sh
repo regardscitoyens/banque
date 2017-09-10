@@ -4,7 +4,7 @@ cd $(dirname $0)/..
 source config.inc || exit 1
 
 # Collect and format details on all accounts
-boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
+PYTHONIOENCODING=UTF-8 boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
  ( echo "ERROR collecting list of accounts" && cat /tmp/boobank.list.log && exit 1 )
 cat data/list.csv.tmp                   |
  sed -r 's/^("?)[0-9]*EUR@/\1/'         |
@@ -15,7 +15,7 @@ rm -f data/list.csv.tmp
 
 # Collect and format recent history for each account
 for BANKID in $CREDITMUTUEL $PAYPAL; do
-  boobank history -f csv $BANKID -n 20 | grep -v "reconfigure this backend" > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
+  PYTHONIOENCODING=UTF-8 boobank history -f csv $BANKID -n 20 | grep -v "reconfigure this backend" > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
    ( echo "ERROR collecting history for $BANKID" && cat /tmp/boobank.${BANKID}.history.log && exit 1 )
   bin/format_bankline.py data/.history.${BANKID}.csv.tmp   |
    csvcut -d "," -c "date,id,amount,raw,type,commission,vdate,label" > data/.history.${BANKID}.csv
