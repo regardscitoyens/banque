@@ -1,12 +1,32 @@
 date,id,amount,raw,type,commission,vdate,label
+2017-09-01,paypal,-215.96,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2017-08-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
+2017-08-30,paypal,9.41,Don de T.W.,0,-0.59,,"Don de T.W. (€10,00)"
+2017-08-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
+2017-08-22,paypal,96.35,Don de P.P.,0,-3.65,,"Don de P.P. (€100,00)"
+2017-08-18,paypal,38.39,Don de C.L.,0,-1.61,,"Don de C.L. (€40,00)"
+2017-08-18,paypal,28.73,Don de F.S.,0,-1.27,,"Don de F.S. (€30,00)"
+2017-08-15,paypal,2.65,Don récurrent de V.R.,0,-0.35,,"Don récurrent de V.R. (€3,00)"
+2017-08-13,paypal,9.41,Don de A.P.,0,-0.59,,"Don de A.P. (€10,00)"
+2017-08-13,paypal,14.24,Don de J.P.,0,-0.76,,"Don de J.P. (€15,00)"
 2017-08-10,creditmutuel,-7.93,"FACTURE SGT17060310006000 DONT TVA 0,38EUR",0,,2017-08-01,"FACTURE SGT17060310006000 DONT TVA 0,38EUR"
+2017-08-08,paypal,144.65,Don de F.P.,0,-5.35,,"Don de F.P. (€150,00)"
+2017-08-05,paypal,19.07,Don de C.F.,0,-0.93,,"Don de C.F. (€20,00)"
+2017-08-04,paypal,14.24,Don de M.P.,0,-0.76,,"Don de M.P. (€15,00)"
+2017-08-01,paypal,-215.96,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
+2017-07-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
+2017-07-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
+2017-07-22,paypal,19.07,Don de b.a.,0,-0.93,,"Don de b.a. (€20,00)"
+2017-07-16,paypal,-113.42,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2017-07-10,creditmutuel,-7.93,"FACTURE SGT17060310005201 DONT TVA 0,38EUR",0,,2017-07-01,"FACTURE SGT17060310005201 DONT TVA 0,38EUR"
+2017-07-03,paypal,-215.96,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2017-07-03,creditmutuel,10.00,VIR M NATHANN COHEN 10278-20-17184620042021 DON RECURRENT DE N.C.,1,,2017-07-03,M NATHANN COHEN 10278-20-17184620042021 DON RECURRENT DE N.C.
+2017-06-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2017-06-29,creditmutuel,500.00,VIR LOGILAB SA 10278-20-17180620005143 DON LOGILAB,1,,2017-06-29,LOGILAB SA 10278-20-17180620005143 DON LOGILAB
 2017-06-12,creditmutuel,-7.93,"FACTURE SGT17060310004423 DONT TVA 0,38EUR",0,,2017-06-01,"FACTURE SGT17060310004423 DONT TVA 0,38EUR"
 2017-06-12,creditmutuel,-215.96,PRLV SEPA ONLINE SAS DEDIBOX 2512228,2,,2017-06-12,SEPA ONLINE SAS DEDIBOX 2512228
 2017-06-06,paypal,-47.93,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
-2017-06-02,creditmutuel,10.00,VIR M NATHANN COHEN 10278-20-17153620023983 DON RECURRENT DE N.C.,1,,2017-06-02,M NATHANN COHEN 10278-20-17153620023983 DON RECURRENT DE N.C.
+2017-06-02,creditmutuel,10.00,VIR M NATHANN COHEN 10278-20-17153620023983,1,,2017-06-02,M NATHANN COHEN 10278-20-17153620023983
 2017-05-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2017-05-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2017-05-19,paypal,28.73,Don de G.C.,0,-1.27,,"Don de G.C. (€30,00)"
