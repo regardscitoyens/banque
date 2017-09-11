@@ -9,6 +9,7 @@
 
 
 <center>
+    <h1>Comptes détaillés de l'association Regards Citoyens</h1>
     <svg id="line_chart"/>
     <div id=soldes>
 	<div>Solde Paypal <div id=solde_paypal></div></div>
@@ -106,8 +107,8 @@
  }).format;
 
  d3.format = d3.formatLocale ({
-     "decimal": ".",
-     "thousands": ",",
+     "decimal": ",",
+     "thousands": "&nbsp;",
      "grouping": [3],
      "currency": ["", " €"],
  }).format;
