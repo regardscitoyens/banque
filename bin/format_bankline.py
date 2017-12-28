@@ -6,6 +6,8 @@ import sys, re, csv
 re_not = re.compile(r'Not (available|loaded)')
 re_time = re.compile(r' [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$')
 re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( (\w).*)?$', re.I)
+sub_ano = lambda x: x.group(1) + (x.group(3) + "." + x.group(5) + ".").upper()
+ano = lambda x: re_ano.sub(sub_ano, x)
 re_creditmut = re.compile(r'(SEPA ONLINE SAS) ONL (\d+)( DEDIBOX \2)')
 def process_data(data):
     writer = csv.writer(sys.stdout)
@@ -19,7 +21,7 @@ def process_data(data):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
             line[i] = line[i].replace(u'Paiement de ', u'Don de ')
-            line[i] = re_ano.sub(r'\1\3.\5.', line[i])
+            line[i] = ano(line[i])
             line[i] = re_creditmut.sub(r'\1\3', line[i])
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
