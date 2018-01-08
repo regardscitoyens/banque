@@ -18,9 +18,12 @@ def process(data):
             raw = "Don récurrent de "
         elif row["Type"] == "Paiement de don":
             raw = "Don de "
-        elif row["Type"] == "Paiement préapprouvé d'un utilisateur de facture de paiement":
+        elif row["Type"] in [
+          "Paiement préapprouvé d'un utilisateur de facture de paiement",
+          "Paiement sur site marchand"
+        ]:
             raw = "Paiement à "
-        elif row["Type"] == "Paiement par PayPal Option+":
+        elif row["Type"] in ["Paiement par PayPal Option+"]:
             raw = "Achat effectué auprès de "
         else:
             print >> sys.stderr, "ERROR: unknown type of line", row["Type"]
