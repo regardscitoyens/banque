@@ -3,6 +3,10 @@
 
 import sys, re, csv
 
+ANON = {
+  "@creditmutuel;2017-12-29": "Don de S.F."
+}
+
 re_not = re.compile(r'Not (available|loaded)')
 re_time = re.compile(r' [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$')
 re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( (\w).*)?$', re.I)
@@ -17,12 +21,16 @@ def process_data(data):
         if line[0] == 'id':
             writer.writerow(line)
             continue
+        check = "%s;%s" % (line[0], line[2])
         for i, el in enumerate(line):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
             line[i] = line[i].replace(u'Paiement de ', u'Don de ')
             line[i] = ano(line[i])
             line[i] = re_creditmut.sub(r'\1\3', line[i])
+        if check in ANON:
+            line[6] = ANON[check]
+            line[8] = ANON[check]
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
         line[3] = re_time.sub('', line[3])
