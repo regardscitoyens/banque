@@ -7,6 +7,12 @@ Le fichier [list.csv](https://github.com/regardscitoyens/banque/blob/master/data
 
 L'export est réalisé grace aux plugins [creditmutuel](http://weboob.org/modules#mod_creditmutuel) et [paypal](http://weboob.org/modules#paypal) de [weboob](http://weboob.org/) et à [csvkit](http://csvkit.readthedocs.org/en/0.9.1/). Les informations sont mises à jour toutes les heures.
 
+## Interface de visualisation
+
+![Visualisation des comptes](www/screen.png)
+
+[Visualiser les données financières de l'association](https://regardscitoyens.github.io/banque/www/).
+
 ## Installation
 
 ```bash
