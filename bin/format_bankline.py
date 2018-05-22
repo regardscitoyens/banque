@@ -9,19 +9,22 @@ ANON = {
 
 re_not = re.compile(r'Not (available|loaded)')
 re_time = re.compile(r' [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$')
-re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( (\w).*)?$', re.I)
-sub_ano = lambda x: x.group(1) + (x.group(3) + "." + x.group(5) + ".").upper()
+re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( +(\w).*)?$', re.I)
+sub_ano = lambda x: x.group(1) + (x.group(3) + "." + (x.group(5) or "") + ".").upper()
 ano = lambda x: re_ano.sub(sub_ano, x)
 re_creditmut = re.compile(r'(SEPA ONLINE SAS) ONL (\d+)( DEDIBOX \2)')
 def process_data(data):
     writer = csv.writer(sys.stdout)
     for line in data:
+      try:
         if not line:
             continue
         if line[0] == 'id':
             writer.writerow(line)
             continue
         check = "%s;%s" % (line[0], line[2])
+        if line[7] != u"Not available":
+            line[8] = " ".join(line[7:9])
         for i, el in enumerate(line):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
@@ -39,6 +42,9 @@ def process_data(data):
         # Only keep lines with definitive date to avoid duplicates across multiple dates
         if len(line[2]) == 10:
             writer.writerow([el.encode('utf-8') for el in line])
+      except Exception as e:
+        print >> sys.stderr, "ERROR on line %s" % line
+        raise e
 
 if __name__ == "__main__":
     with open(sys.argv[1]) as f:
