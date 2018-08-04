@@ -27,6 +27,7 @@ def process_data(data):
             line[8] = " ".join(line[7:9])
         for i, el in enumerate(line):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
+            line[i] = line[i].replace(u"Cliquer pour déplier ou plier le détail de l'opération ", "")
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
             line[i] = line[i].replace(u'Paiement de ', u'Don de ')
             line[i] = ano(line[i])
