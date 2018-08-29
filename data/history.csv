@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2018-08-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2018-08-29,paypal,1.68,Don de A.K.,0,-0.32,,"Don de A.K. (€2,00)"
 2018-08-15,paypal,2.65,Don récurrent de V.R.,0,-0.35,,"Don récurrent de V.R. (€3,00)"
 2018-08-10,creditmutuel,-7.93,"FACTURE SGT18060310006630 DONT TVA 0,38EUR",0,,2018-08-01,"FACTURE SGT18060310006630 DONT TVA 0,38EUR"
