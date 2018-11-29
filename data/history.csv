@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2018-11-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2018-11-23,creditmutuel,200.00,REM CHQ REF06031R08,4,,2018-11-26,REF06031R08
 2018-11-15,paypal,2.65,Don récurrent de V.R.,0,-0.35,,"Don récurrent de V.R. (€3,00)"
 2018-11-12,creditmutuel,-7.93,"FACTURE SGT18060310009298 DONT TVA 0,38EUR",0,,2018-11-01,"FACTURE SGT18060310009298 DONT TVA 0,38EUR"
