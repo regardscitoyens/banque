@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2018-12-10,creditmutuel,-4.83,"FACTURE SGT18060310010191 DONT TVA 0,38EUR",0,,2018-12-01,"FACTURE SGT18060310010191 DONT TVA 0,38EUR"
 2018-12-03,paypal,-215.96,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2018-11-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2018-11-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
