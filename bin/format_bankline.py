@@ -4,7 +4,8 @@
 import sys, re, csv
 
 ANON = {
-  "@creditmutuel;2017-12-29": "Don de S.F."
+  "@creditmutuel;2017-12-29": "Don de S.F.",
+  "@creditmutuel;2019-01-02": "Don de S.F."
 }
 
 re_not = re.compile(r'Not (available|loaded)')
