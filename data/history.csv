@@ -1,4 +1,6 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-01-12,paypal,4.58,Don récurrent de E.P.,0,-0.42,,"Don récurrent de E.P. (€5,00)"
+2019-01-12,paypal,19.07,Don de M.U.,0,-0.93,,"Don de M.U. (€20,00)"
 2019-01-10,creditmutuel,-4.83,"FACTURE SGT19060310000684 DONT TVA 0,38EUR",0,,2019-01-01,"FACTURE SGT19060310000684 DONT TVA 0,38EUR"
 2019-01-08,paypal,-14.4,Achat effectué auprès de GANDI SAS,0,0.00,,Achat effectué auprès de GANDI SAS
 2019-01-03,paypal,-7.12,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
