@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-02-15,paypal,2.65,Don récurrent de V.R.,0,-0.35,,"Don récurrent de V.R. (€3,00)"
 2019-02-12,paypal,4.58,Don récurrent de E.P.,0,-0.42,,"Don récurrent de E.P. (€5,00)"
 2019-02-11,creditmutuel,-4.83,"FACTURE SGT19060310001584 DONT TVA 0,38EUR",0,,2019-02-01,"FACTURE SGT19060310001584 DONT TVA 0,38EUR"
 2019-02-04,paypal,-215.96,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
