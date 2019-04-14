@@ -24,8 +24,8 @@ def process_data(data):
             writer.writerow(line)
             continue
         check = "%s;%s" % (line[0], line[2])
-        if line[7] != u"Not available":
-            line[8] = " ".join(line[7:9])
+        if line[8] != u"Not available":
+            line[9] = " ".join(line[7:9])
         for i, el in enumerate(line):
             line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u"Cliquer pour déplier ou plier le détail de l'opération ", "")
@@ -35,12 +35,12 @@ def process_data(data):
             line[i] = re_creditmut.sub(r'\1\3', line[i])
         if check in ANON:
             line[6] = ANON[check]
-            line[8] = ANON[check]
+            line[9] = ANON[check]
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
         line[3] = re_time.sub('', line[3])
-        if line[11] and line[11] not in ['commission', '0.00']:
-            line[8] += (u' (€%.2f)' % (float(line[9]) - float(line[11]))).replace('.', ',')
+        if line[12] and line[12] not in ['commission', '0.00']:
+            line[9] += (u' (€%.2f)' % (float(line[10]) - float(line[12]))).replace('.', ',')
         # Only keep lines with definitive date to avoid duplicates across multiple dates
         if len(line[2]) == 10:
             writer.writerow([el.encode('utf-8') for el in line])
