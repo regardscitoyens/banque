@@ -1,4 +1,8 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-06-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
+2019-06-18,creditmutuel,-215.96,PRLV SEPA ONLINE SAS DEDIBOX 3373242,2,,2019-06-18,SEPA ONLINE SAS DEDIBOX 3373242
+2019-06-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2019-06-10,creditmutuel,-4.88,"FACTURE SGT19060310005218 DONT TVA 0,38EUR",0,,2019-06-01,"FACTURE SGT19060310005218 DONT TVA 0,38EUR"
 2019-05-30,paypal,9.41,Don récurrent de D.M.,0,-0.59,,"Don récurrent de D.M. (€10,00)"
 2019-05-29,paypal,4.58,Don récurrent de M.D.,0,-0.42,,"Don récurrent de M.D. (€5,00)"
 2019-05-28,paypal,48.05,Don de A.B.,0,-1.95,,"Don de A.B. (€50,00)"
