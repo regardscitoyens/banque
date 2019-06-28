@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-06-28,paypal,-49.06,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2019-06-26,creditmutuel,2000.00,"VIR LOGILAB SA 10278-20-19177630007697 DON LOGILAB SA, 104 BD AUGUSTE BLAN QUI 75013 PARIS",1,,2019-06-26,"LOGILAB SA 10278-20-19177630007697 DON LOGILAB SA, 104 BD AUGUSTE BLAN QUI 75013 PARIS"
 2019-06-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2019-06-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
