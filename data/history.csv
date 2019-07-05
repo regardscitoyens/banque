@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-07-05,paypal,9.36,Don récurrent de D.M.,0,-0.64,,"Don récurrent de D.M. (€10,00)"
 2019-07-05,creditmutuel,-215.96,PRLV SEPA ONLINE SAS DEDIBOX 3405256,2,,2019-07-05,SEPA ONLINE SAS DEDIBOX 3405256
 2019-07-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
 2019-07-03,paypal,4.50,Don de A.K.,0,-0.50,,"Don de A.K. (€5,00)"
