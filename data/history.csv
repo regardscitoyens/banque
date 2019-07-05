@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-07-05,creditmutuel,-215.96,PRLV SEPA ONLINE SAS DEDIBOX 3405256,2,,2019-07-05,SEPA ONLINE SAS DEDIBOX 3405256
 2019-07-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
 2019-07-03,paypal,4.50,Don de A.K.,0,-0.50,,"Don de A.K. (€5,00)"
 2019-07-01,creditmutuel,5.00,VIR M. RUIZ VIVIEN 10278-20-19182380054932 M. RUIZ VIVIEN,1,,2019-07-01,M. RUIZ VIVIEN 10278-20-19182380054932 M. RUIZ VIVIEN
