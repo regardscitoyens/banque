@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-07-23,paypal,28.78,Don de A.P.,0,-1.22,,"Don de A.P. (€30,00)"
 2019-07-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
 2019-07-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
 2019-07-10,creditmutuel,-4.88,"FACTURE SGT19060310006141 DONT TVA 0,38EUR",0,,2019-07-01,"FACTURE SGT19060310006141 DONT TVA 0,38EUR"
