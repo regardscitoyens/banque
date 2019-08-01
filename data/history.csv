@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-08-01,creditmutuel,5.00,VIR M. RUIZ VIVIEN 10278-20-19213360008023 M. RUIZ VIVIEN,1,,2019-08-01,M. RUIZ VIVIEN 10278-20-19213360008023 M. RUIZ VIVIEN
 2019-07-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2019-07-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2019-07-23,paypal,28.78,Don de A.P.,0,-1.22,,"Don de A.P. (€30,00)"
