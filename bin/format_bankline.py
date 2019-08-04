@@ -8,7 +8,7 @@ ANON = {
   "@creditmutuel;2019-01-02": "Don de S.F."
 }
 ANON2 = {
-  "M. R[A-Z]+ V[A-Z]+ \d+": "Don de V.R."
+  "M. R[A-Z]+ V[A-Z]+ \d+": u"Don récurrent de V.R."
 }
 
 re_not = re.compile(r'Not (available|loaded)')
@@ -37,11 +37,11 @@ def process_data(data):
             line[i] = ano(line[i])
             line[i] = re_creditmut.sub(r'\1\3', line[i])
         if check in ANON:
-            line[6] = ANON[check]
+            line[7] = ANON[check]
             line[9] = ANON[check]
-        for check, res in ANON2:
+        for check, res in ANON2.items():
             if re.match(check, line[9]):
-                line[6] = res
+                line[7] = res
                 line[9] = res
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
