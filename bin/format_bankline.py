@@ -7,6 +7,9 @@ ANON = {
   "@creditmutuel;2017-12-29": "Don de S.F.",
   "@creditmutuel;2019-01-02": "Don de S.F."
 }
+ANON2 = {
+  "M. R[A-Z]+ V[A-Z]+ \d+": "Don de V.R."
+}
 
 re_not = re.compile(r'Not (available|loaded)')
 re_time = re.compile(r' [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$')
@@ -36,6 +39,10 @@ def process_data(data):
         if check in ANON:
             line[6] = ANON[check]
             line[9] = ANON[check]
+        for check, res in ANON2:
+            if re.match(check, line[9]):
+                line[6] = res
+                line[9] = res
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
         line[3] = re_time.sub('', line[3])
