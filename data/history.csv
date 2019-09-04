@@ -1,4 +1,5 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-09-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
 2019-09-02,creditmutuel,5.00,Don récurrent de V.R.,1,,2019-09-02,Don récurrent de V.R.
 2019-08-30,paypal,9.36,Don récurrent de D.M.,0,-0.64,,"Don récurrent de D.M. (€10,00)"
 2019-08-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
