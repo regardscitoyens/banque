@@ -1,4 +1,7 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-10-10,creditmutuel,-4.88,"FACTURE SGT19060310008911 DONT TVA 0,38EUR",0,,2019-10-01,"FACTURE SGT19060310008911 DONT TVA 0,38EUR"
+2019-10-08,creditmutuel,-215.96,PRLV SEPA ONLINE SAS DEDIBOX 3504333,2,,2019-10-08,SEPA ONLINE SAS DEDIBOX 3504333
+2019-10-01,creditmutuel,5.00,Don récurrent de V.R.,1,,2019-10-01,Don récurrent de V.R.
 2019-09-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2019-09-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2019-09-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
