@@ -1,12 +1,17 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-12-04,paypal,96.75,Don de C.G.,0,-3.25,,"Don de C.G. (€100,00)"
+2019-12-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2019-12-03,paypal,96.75,Don de P.L.,0,-3.25,,"Don de P.L. (€100,00)"
+2019-12-02,creditmutuel,5.00,Don récurrent de V.R.,0,,2019-12-02,Don récurrent de V.R.
+2019-11-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2019-11-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2019-11-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
 2019-11-21,paypal,96.75,Don de A.L.,0,-3.25,,"Don de A.L. (€100,00)"
 2019-11-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
 2019-11-11,creditmutuel,-4.88,"11/11/2019 FACTURE SGT19060310009853 DONT TVA 0,38EUR -4,88 EUR",0,,2019-11-01,"11/11/2019 FACTURE SGT19060310009853 DONT TVA 0,38EUR -4,88 EUR"
 2019-11-11,creditmutuel,-215.96,"11/11/2019 PRLV SEPA ONLINE SAS DEDIBOX 3537545 -215,96 EUR",0,,2019-11-11,"11/11/2019 PRLV SEPA ONLINE SAS DEDIBOX 3537545 -215,96 EUR"
-2019-11-04,creditmutuel,5.00,Don récurrent de V.R.,1,,2019-11-04,Don récurrent de V.R.
 2019-11-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2019-11-04,creditmutuel,5.00,Don récurrent de V.R.,1,,2019-11-04,Don récurrent de V.R.
 2019-11-03,paypal,-111.98,Achat effectué auprès de GANDI SAS,0,0.00,,Achat effectué auprès de GANDI SAS
 2019-10-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2019-10-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
