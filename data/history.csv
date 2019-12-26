@@ -1,4 +1,11 @@
 date,id,amount,raw,type,commission,vdate,label
+2019-12-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
+2019-12-22,paypal,9.36,Don récurrent de P.B.,0,-0.64,,"Don récurrent de P.B. (€10,00)"
+2019-12-21,paypal,19.07,Don de L.P.,0,-0.93,,"Don de L.P. (€20,00)"
+2019-12-14,paypal,14.21,Don de L.A.,0,-0.79,,"Don de L.A. (€15,00)"
+2019-12-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2019-12-10,creditmutuel,-4.88,"10/12/2019 FACTURE SGT19060310010810 DONT TVA 0,38EUR -4,88 EUR",0,,2019-12-01,"10/12/2019 FACTURE SGT19060310010810 DONT TVA 0,38EUR -4,88 EUR"
+2019-12-10,creditmutuel,-215.96,"10/12/2019 PRLV SEPA ONLINE SAS DEDIBOX 3572810 -215,96 EUR",0,,2019-12-10,"10/12/2019 PRLV SEPA ONLINE SAS DEDIBOX 3572810 -215,96 EUR"
 2019-12-04,paypal,96.75,Don de C.G.,0,-3.25,,"Don de C.G. (€100,00)"
 2019-12-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
 2019-12-03,paypal,96.75,Don de P.L.,0,-3.25,,"Don de P.L. (€100,00)"
