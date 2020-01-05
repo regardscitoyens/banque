@@ -8,7 +8,8 @@ ANON = {
   "@creditmutuel;2019-01-02": "Don de S.F."
 }
 ANON2 = {
-  "VIR M. R[A-Z]+ V[A-Z]+ \d+": u"Don récurrent de V.R."
+  "VIR M. R[A-Z]+ V[A-Z]+ \d+": u"Don récurrent de V.R.",
+  "VIR M. F[A-Z]+ S[A-Z]+ REFERENCE": u"Don récurrent de S.F."
 }
 
 re_not = re.compile(r'Not (available|loaded)')
