@@ -1,0 +1,9 @@
+ACCOUNT_ID=accound_id@weboobmodule
+HISTORY_FILE=data/history.csv
+LIST_FILE=data/list.csv
+
+# Conf pour cozy cloud
+COZY_PASSCRYPTE=
+COZY_URLBANK=https://moncozy-banks.mycozy.cloud
+COZY_COMPTEBANCAIRE_ID=
+COZY_COMPTEBANCAIRE_NOM=
