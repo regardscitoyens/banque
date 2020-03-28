@@ -29,10 +29,10 @@ done
 bash bin/update_cozy.sh
 
 # Merge new entries into global history
-cat data/history.csv $BANKFILES | sort -ur > data/.history.csv.tmp
+cat data/history.csv $BANKFILES > data/.history.csv.tmp
 
 # Anonymisation
-bin/anon_bankline.py data/.history.csv.tmp > data/history.csv
+bin/anon_bankline.py data/.history.csv.tmp | sort -ur > data/history.csv
 rm data/.history.csv.tmp
 
 # Auto commit if not debugging
