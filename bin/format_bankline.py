@@ -3,21 +3,12 @@
 
 import sys, re, csv
 
-ANON = {
+OLD_ANON = {
   "@creditmutuel;2017-12-29": "Don de S.F.",
   "@creditmutuel;2019-01-02": "Don de S.F."
 }
-ANON2 = {
-  "VIR M. R[A-Z]+ V[A-Z]+ \d+": u"Don récurrent de V.R.",
-  "VIR M. F[A-Z]+ S[A-Z]+ REFERENCE": u"Don récurrent de S.F."
-}
-
-re_not = re.compile(r'Not (available|loaded)')
 re_time = re.compile(r' [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$')
-re_ano = re.compile(ur'(Don( récurrent)? de )(\w)\S+( +(\w).*)?$', re.I)
-sub_ano = lambda x: x.group(1) + (x.group(3) + "." + (x.group(5) or "") + ".").upper()
-ano = lambda x: re_ano.sub(sub_ano, x)
-re_creditmut = re.compile(r'(SEPA ONLINE SAS) ONL (\d+)( DEDIBOX \2)')
+
 def process_data(data):
     writer = csv.writer(sys.stdout)
     for line in data:
@@ -31,19 +22,12 @@ def process_data(data):
         if line[8] != u"Not available":
             line[9] = " ".join(line[7:9])
         for i, el in enumerate(line):
-            line[i] = re_not.sub('', line[i].decode('utf-8'))
             line[i] = line[i].replace(u"Cliquer pour déplier ou plier le détail de l'opération ", "")
             line[i] = line[i].replace(u'Paiement récurrent de ', u'Don récurrent de ')
             line[i] = line[i].replace(u'Paiement de ', u'Don de ')
-            line[i] = ano(line[i])
-            line[i] = re_creditmut.sub(r'\1\3', line[i])
-        if check in ANON:
-            line[7] = ANON[check]
-            line[9] = ANON[check]
-        for check, res in ANON2.items():
-            if re.search(check, line[9]):
-                line[7] = res
-                line[9] = res
+        if check in OLD_ANON:
+            line[7] = OLD_ANON[check]
+            line[9] = OLD_ANON[check]
         line[0] = re.sub(r'^[0-9A-Z]*@', '', line[0])
         line[2] = re_time.sub('', line[2])
         line[3] = re_time.sub('', line[3])

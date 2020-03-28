@@ -26,9 +26,14 @@ for BANKID in $CREDITMUTUEL $PAYPAL; do
   BANKFILES=$BANKFILES data/.history.${BANKID}.csv
 done
 
+bash bin/update_cozy.sh
+
 # Merge new entries into global history
 cat data/history.csv $BANKFILES | sort -ur > data/.history.csv.tmp
-mv data/.history.csv.tmp data/history.csv
+
+# Anonymisation
+bin/anon_bankline.py data/.history.csv.tmp > data/history.csv
+rm data/.history.csv.tmp
 
 # Auto commit if not debugging
 if ! test "$1" = "nocommit" && [ `cat data/list.csv | wc -l` -eq 3 ] && [ -s data/.history.${CREDITMUTUEL}.csv ] && [ -s data/.history.${PAYPAL}.csv ]; then
