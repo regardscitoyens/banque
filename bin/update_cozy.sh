@@ -9,8 +9,6 @@ curl -s -b /tmp/cozycookie  -c /tmp/cozycookie "$(curl -s -X POST "$COZY_URLAUTH
 COZY_JWTTOKEN=$(curl -s "$COZY_URLBANK" -b /tmp/cozycookie | grep "data-cozy-token=" | sed -r 's/.+data-cozy-token="//' | sed -r 's/".+//')
 COZY_URLDATA="https://$(curl -s "$COZY_URLBANK" -b /tmp/cozycookie | grep "data-cozy-domain=" | sed -r 's/.+data-cozy-domain="//' | sed -r 's/".+//')/data"
 
-git pull
-
 echo "date,id,amount,raw,type,commission,vdate,label" > $HISTORY_FILE".new"
 
 curl -s "$COZY_URLDATA/io.cozy.bank.operations/_all_docs?include_docs=true" -b /tmp/cozycookie -H 'Accept: application/json' -H "Authorization: Bearer $COZY_JWTTOKEN" | 
@@ -24,7 +22,3 @@ cat $HISTORY_FILE".new" $HISTORY_FILE".old" | sort| uniq | sort -r > $HISTORY_FI
 mv $HISTORY_FILE".tmp" $HISTORY_FILE
 rm -f $HISTORY_FILE".old" $HISTORY_FILE".new"
 
-git add $HISTORY_FILE
-git commit -m "Mise à jour des opérations" $HISTORY_FILE > /dev/null
-
-git push
