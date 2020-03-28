@@ -36,8 +36,11 @@ bin/anon_bankline.py data/.history.csv.tmp > data/history.csv
 rm data/.history.csv.tmp
 
 # Auto commit if not debugging
-if ! test "$1" = "nocommit" && [ `cat data/list.csv | wc -l` -eq 3 ] && [ -s data/.history.${CREDITMUTUEL}.csv ] && [ -s data/.history.${PAYPAL}.csv ]; then
-  git add data/list.csv data/history.csv
+if ! test "$1" = "nocommit" ; then
+  if test `cat data/list.csv | wc -l` -eq 3 ; then
+	  git add data/list.csv
+  fi
+  git add data/history.csv
   if git commit -m "update bank situation" > /dev/null ; then
     git pull origin master
     git push origin master
