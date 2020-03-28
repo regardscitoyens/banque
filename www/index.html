@@ -182,7 +182,7 @@
  // Loads balance data
  d3.csv("//raw.githubusercontent.com/regardscitoyens/banque/master/data/list.csv", function(data) {
      $("#solde_paypal").html(formatCurrency(_.filter(data,function (x){return x.id=='paypal';})[0].balance));
-     $("#solde_creditmutuel").html(formatCurrency(_.filter(data,function (x){return x.id=='0603100020568901@creditmutuel';})[0].balance));
+     $("#solde_creditmutuel").html(formatCurrency(_.filter(data,function (x){return x.id=='creditmutuel';})[0].balance));
  });
 
  // Loads table data
