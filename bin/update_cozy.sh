@@ -18,7 +18,8 @@ curl -s "$COZY_URLDATA/io.cozy.bank.operations/_all_docs?include_docs=true" -b /
 	jq -c "[.rawDate,\"|<\",.originalBankLabel,\"|>\",.amount,.localCategoryId,\"$COZY_COMPTEBANCAIRE_NOM\",.rawDate,.valueDate,\"|<\",.label,\"|>\"]" | 
 	sed 's/"//g' | sed 's/|<,/"/g' | sed 's/,|>/"/g' | sed 's/\[//g' | sed 's/^\[//' | sed 's/\]$//' >> $HISTORY_FILE".new"
 
-tail -n +10 $HISTORY_FILE > $HISTORY_FILE".old"
+grep "$COZY_COMPTEBANCAIRE_NOM" $HISTORY_FILE | cat > $HISTORY_FILE".old"
+grep -v "$COZY_COMPTEBANCAIRE_NOM" $HISTORY_FILE >> $HISTORY_FILE".old"
 cat $HISTORY_FILE".new" $HISTORY_FILE".old" | sort| uniq | sort -r > $HISTORY_FILE".tmp"
 mv $HISTORY_FILE".tmp" $HISTORY_FILE
 rm -f $HISTORY_FILE".old" $HISTORY_FILE".new"
