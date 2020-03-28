@@ -23,3 +23,12 @@ cat $HISTORY_FILE".new" $HISTORY_FILE".old" | sort -ur > $HISTORY_FILE".tmp"
 mv $HISTORY_FILE".tmp" $HISTORY_FILE
 rm -f $HISTORY_FILE".old" $HISTORY_FILE".new"
 
+curl -s "$COZY_URLDATA/io.cozy.bank.accounts/_all_docs?include_docs=true" -b /tmp/cozycookie -H 'Accept: application/json' -H "Authorization: Bearer $COZY_JWTTOKEN" | jq -c '.rows[].doc' | grep "\"$COZY_COMPTEBANCAIRE_ID\"" | jq -c "[.label,.balance,.comingBalance,.currency,.type,\"$COZY_COMPTEBANCAIRE_NOM\"]" | sed 's/"//g' | sed 's/^\[//' | sed 's/\]$//' > $LIST_FILE.tmp
+
+if test $(wc -l $LIST_FILE.tmp | cut -d " " -f 1) -gt 0
+then
+    echo "label,balance,coming,currency,type,id" > $LIST_FILE
+    cat $LIST_FILE.tmp >> $LIST_FILE
+fi
+
+rm $LIST_FILE.tmp
