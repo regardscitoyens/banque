@@ -19,7 +19,7 @@ curl -s "$COZY_URLDATA/io.cozy.bank.operations/_all_docs?include_docs=true" -b /
 
 grep "$COZY_COMPTEBANCAIRE_NOM" $HISTORY_FILE | tail -n +5 > $HISTORY_FILE".old"
 grep -v "$COZY_COMPTEBANCAIRE_NOM" $HISTORY_FILE >> $HISTORY_FILE".old"
-cat $HISTORY_FILE".new" $HISTORY_FILE".old" | sort| uniq | sort -r > $HISTORY_FILE".tmp"
+cat $HISTORY_FILE".new" $HISTORY_FILE".old" | sort -ur > $HISTORY_FILE".tmp"
 mv $HISTORY_FILE".tmp" $HISTORY_FILE
 rm -f $HISTORY_FILE".old" $HISTORY_FILE".new"
 
