@@ -26,6 +26,9 @@ for BANKID in $CREDITMUTUEL $PAYPAL; do
   BANKFILES=$BANKFILES data/.history.${BANKID}.csv
 done
 
+if ! test -s data/list.csv ; then
+	git checkout data/list.csv
+fi
 bash bin/update_cozy.sh
 
 # Merge new entries into global history
@@ -44,5 +47,6 @@ if ! test "$1" = "nocommit" ; then
   if git commit -m "update bank situation" > /dev/null ; then
     git pull origin master
     git push origin master
+    git checkout data/list.csv data/history.csv
   fi
 fi
