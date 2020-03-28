@@ -1,6 +1,7 @@
 #!/bin/bash
 
-. bin/config.inc
+cd $(dirname $0)/..
+. config.inc
 
 # Connexion à Cozycloud
 COZY_URLAUTH=$(curl -s -X GET -I "$COZY_URLBANK" | grep "location" | tr -d "\r" | cut -d " " -f 2)
