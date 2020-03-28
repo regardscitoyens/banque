@@ -27,8 +27,9 @@ curl -s "$COZY_URLDATA/io.cozy.bank.accounts/_all_docs?include_docs=true" -b /tm
 
 if test $(wc -l $LIST_FILE.tmp | cut -d " " -f 1) -gt 0
 then
-    echo "label,balance,coming,currency,type,id" > $LIST_FILE
-    cat $LIST_FILE.tmp >> $LIST_FILE
+    grep -v "$COZY_COMPTEBANCAIRE_NOM" $LIST_FILE > $LIST_FILE".new"
+    cat $LIST_FILE.tmp | awk -F ',' '{print $6","$1","$2","$4","$3","$5}' >> $LIST_FILE".new"
+	mv $LIST_FILE".new" $LIST_FILE
 fi
 
 rm $LIST_FILE.tmp
