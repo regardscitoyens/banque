@@ -1,6 +1,7 @@
 ACCOUNT_ID=accound_id@weboobmodule
 HISTORY_FILE=data/history.csv
 LIST_FILE=data/list.csv
+BANKS=XXXX@creditmutuel XXX@paypal
 
 # Conf pour cozy cloud
 COZY_PASSCRYPTE=

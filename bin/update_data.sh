@@ -4,8 +4,11 @@ cd $(dirname $0)/..
 source config.inc || exit 1
 
 # Collect and format details on all accounts
-PYTHONIOENCODING=UTF-8 boobank -f csv list > data/list.csv.tmp 2> /tmp/boobank.list.log ||
- ( echo "ERROR collecting list of accounts" && cat /tmp/boobank.list.log && exit 1 )
+for BANKID in $BANKS; do
+  BACKENDID=$(echo $BANKID | sed 's/.*@//')
+  PYTHONIOENCODING=UTF-8 boobank -b $BACKENDID -f csv list >> data/list.csv.tmp 2> /tmp/boobank.list.log ||
+    ( echo "ERROR collecting list of accounts from "$BACKENDID && cat /tmp/boobank.list.log && exit 1 )
+done
 cat data/list.csv.tmp                   |
  sed -r 's/^("?)[0-9]*EUR@/\1/'         |
  sed -r 's/Not (available|loaded)//g'   |
@@ -16,7 +19,7 @@ rm -f data/list.csv.tmp
 
 # Collect and format recent history for each account
 BANKFILES=""
-for BANKID in $CREDITMUTUEL $PAYPAL; do
+for BANKID in $BANKS; do
   PYTHONIOENCODING=UTF-8 boobank history -f csv $BANKID -n 20 | grep -v "reconfigure this backend" > data/.history.${BANKID}.csv.tmp 2> /tmp/boobank.${BANKID}.history.log ||
    ( echo "ERROR collecting history for $BANKID" && cat /tmp/boobank.${BANKID}.history.log && exit 1 )
   bin/format_bankline.py data/.history.${BANKID}.csv.tmp   |
