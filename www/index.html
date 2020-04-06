@@ -152,7 +152,7 @@
      svg.append("g")
 	.attr("transform","translate(0,"+(height-20)+")")
 	.attr("id","xaxis")
-	.call(d3.axisBottom(xscale).ticks(8).tickFormat(d3.timeFormat("%Y-%b")))
+	.call(d3.axisBottom(xscale).ticks(8).tickFormat(d3.timeFormat("%b %Y")))
  }
 
  /* Filter the entry of the table. Updates the totals. */
