@@ -6,7 +6,7 @@ cd $(dirname $0)/..
 # Connexion à Cozycloud
 COZY_URLAUTH=$(curl -s -X GET -I "$COZY_URLBANK" | grep "location" | tr -d "\r" | cut -d " " -f 2)
 COZY_CSRFTOKEN=$(curl -s -X GET "$COZY_URLAUTH" -c /tmp/cozycookie | grep "csrf_token" | sed -r 's/.+value=\"//' | sed -r 's/".+//')
-curl -s -b /tmp/cozycookie  -c /tmp/cozycookie "$(curl -s -X POST "$COZY_URLAUTH" -b /tmp/cozycookie -c /tmp/cozycookie -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' -d "passphrase=$COZY_PASSCRYPTE&csrf_token=$COZY_CSRFTOKEN&long-run-session=1&two-factor-trusted-device-token=&redirect=$COZY_URLBANK" | jq '.redirect' | sed 's/"//g')"
+curl -s -b /tmp/cozycookie  -c /tmp/cozycookie "$(curl -s -X POST "$COZY_URLAUTH" -b /tmp/cozycookie -c /tmp/cozycookie -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' -d "passphrase=$COZY_PASSCRYPTE&csrf_token=$COZY_CSRFTOKEN&long-run-session=1&two-factor-trusted-device-token=&redirect=$COZY_URLBANK" | jq '.redirect' | sed 's/"//g')" > /dev/null
 COZY_JWTTOKEN=$(curl -s "$COZY_URLBANK" -b /tmp/cozycookie | grep "data-cozy-token=" | sed -r 's/.+data-cozy-token="//' | sed -r 's/".+//')
 COZY_URLDATA="https://$(curl -s "$COZY_URLBANK" -b /tmp/cozycookie | grep "data-cozy-domain=" | sed -r 's/.+data-cozy-domain="//' | sed -r 's/".+//')/data"
 
