@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys, re, csv, codecs
-from format_bankline import ano
+from anon_bankline import ano
 
 re_date = re.compile(r"(..)/(..)/(....)")
 datize = lambda d: re_date.sub(r"\3-\2-\1", d)
