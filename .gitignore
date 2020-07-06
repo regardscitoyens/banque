@@ -1,3 +1,4 @@
+*.pyc
 config.inc
 data/.history*
 data/Download.csv
