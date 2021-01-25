@@ -3,8 +3,11 @@ date,id,amount,raw,type,commission,vdate,label
 2021-01-17,paypal,-61.24,Achat effectué auprès de GANDI SAS,0,0.00,,Achat effectué auprès de GANDI SAS
 2021-01-15,paypal,48.20,Don de D.D.,0,-1.80,,"Don de D.D. (€50,00)"
 2021-01-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2021-01-12,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3979532,0,2021-01-12,null,SEPA ONLINE SAS DEDIBOX 3979532
+2021-01-11,creditmutuel,-4.93,"FACTURE SGT21060310000797 DONT TVA 0,38EUR",0,2021-01-11,null,"FACTURE SGT21060310000797 DONT TVA 0,38EUR"
 2021-01-09,paypal,193.85,Don de F.P.,0,-6.15,,"Don de F.P. (€200,00)"
 2021-01-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2021-01-04,creditmutuel,5,VIR M. R.V. 10278-20-21004480045181,200110,2021-01-04,null,M. R.V. 10278-20-21004480045181
 2021-01-01,paypal,28.78,Don de J.F.,0,-1.22,,"Don de J.F. (€30,00)"
 2020-12-31,paypal,50.14,Don de F.D.,0,-1.86,,"Don de F.D. (€52,00)"
 2020-12-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
@@ -13,29 +16,41 @@ date,id,amount,raw,type,commission,vdate,label
 2020-12-17,paypal,96.75,Don de P.L.,0,-3.25,,"Don de P.L. (€100,00)"
 2020-12-13,paypal,19.07,Don de L.A.,0,-0.93,,"Don de L.A. (€20,00)"
 2020-12-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2020-12-10,creditmutuel,-4.93,"FACTURE SGT20060310011611 DONT TVA 0,38EUR",0,2020-12-10,null,"FACTURE SGT20060310011611 DONT TVA 0,38EUR"
+2020-12-08,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3949574,0,2020-12-08,null,SEPA ONLINE SAS DEDIBOX 3949574
 2020-12-05,paypal,96.75,Don de C.G.,0,-3.25,,"Don de C.G. (€100,00)"
 2020-12-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2020-12-01,creditmutuel,5,VIR M. R.V. 10278-20-20336320025950,200110,2020-12-01,null,M. R.V. 10278-20-20336320025950
 2020-11-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2020-11-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2020-11-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2020-11-10,creditmutuel,-4.93,"FACTURE SGT20060310010596 DONT TVA 0,38EUR",0,2020-11-10,null,"FACTURE SGT20060310010596 DONT TVA 0,38EUR"
+2020-11-10,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3919492,0,2020-11-10,null,SEPA ONLINE SAS DEDIBOX 3919492
 2020-11-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
 2020-11-02,paypal,-97.58,Achat effectué auprès de GANDI SAS,0,0.00,,Achat effectué auprès de GANDI SAS
+2020-11-02,creditmutuel,5,VIR M. R.V. 10278-20-20307380048399,200110,2020-11-02,null,M. R.V. 10278-20-20307380048399
 2020-10-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2020-10-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2020-10-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2020-10-12,creditmutuel,-4.93,"FACTURE SGT20060310009588 DONT TVA 0,38EUR",0,2020-10-12,null,"FACTURE SGT20060310009588 DONT TVA 0,38EUR"
+2020-10-12,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3889079,0,2020-10-12,null,SEPA ONLINE SAS DEDIBOX 3889079
 2020-10-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2020-10-01,creditmutuel,5,VIR M. R.V. 10278-20-20275370039418,200110,2020-10-01,null,M. R.V. 10278-20-20275370039418
 2020-09-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2020-09-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2020-09-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2020-09-10,creditmutuel,-4.93,"FACTURE SGT20060310008587 DONT TVA 0,38EUR",0,2020-09-10,null,"FACTURE SGT20060310008587 DONT TVA 0,38EUR"
+2020-09-08,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3858418,0,2020-09-08,null,SEPA ONLINE SAS DEDIBOX 3858418
 2020-09-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2020-09-01,creditmutuel,5,VIR M. R.V. 10278-20-20245330028330,200110,2020-09-01,null,M. R.V. 10278-20-20245330028330
 2020-08-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2020-08-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2020-08-16,paypal,48.20,Don de P.S.,0,-1.80,,"Don de P.S. (€50,00)"
 2020-08-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
-2020-08-10,creditmutuel,-4.93,"FACTURE SGT20060310007600 DONT TVA 0,38EUR",0,2020-08-10,2020-08-01,"FACTURE SGT20060310007600 DONT TVA 0,38EUR"
-2020-08-10,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3828952,0,2020-08-10,2020-08-10,SEPA ONLINE SAS DEDIBOX 3828952
+2020-08-10,creditmutuel,-4.93,"FACTURE SGT20060310007600 DONT TVA 0,38EUR",0,2020-08-10,null,"FACTURE SGT20060310007600 DONT TVA 0,38EUR"
+2020-08-10,creditmutuel,-179.96,PRLV SEPA ONLINE SAS DEDIBOX 3828952,0,2020-08-10,null,SEPA ONLINE SAS DEDIBOX 3828952
 2020-08-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
-2020-08-03,creditmutuel,5,VIR M. R.V. 10278-20-20216320066717,200110,2020-08-03,2020-08-03,M. R.V. 10278-20-20216320066717
+2020-08-03,creditmutuel,5,VIR M. R.V. 10278-20-20216320066717,200110,2020-08-03,null,M. R.V. 10278-20-20216320066717
 2020-07-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
 2020-07-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
 2020-07-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
