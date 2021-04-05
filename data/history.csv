@@ -1,4 +1,21 @@
 date,id,amount,raw,type,commission,vdate,label
+2021-04-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2021-04-02,paypal,9.36,Don récurrent de T.G.,0,-0.64,,"Don récurrent de T.G. (€10,00)"
+2021-04-01,paypal,19.07,Don de L.B.,0,-0.93,,"Don de L.B. (€20,00)"
+2021-03-30,paypal,9.36,Don de M.B.,0,-0.64,,"Don de M.B. (€10,00)"
+2021-03-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
+2021-03-22,paypal,4.50,Don récurrent de A.B.,0,-0.50,,"Don récurrent de A.B. (€5,00)"
+2021-03-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2021-03-10,paypal,1.59,Don de C.G.,0,-0.41,,"Don de C.G. (€2,00)"
+2021-03-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2021-02-28,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
+2021-02-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
+2021-02-22,paypal,4.50,Don récurrent de A.B.,0,-0.50,,"Don récurrent de A.B. (€5,00)"
+2021-02-12,paypal,4.50,Don récurrent de E.P.,0,-0.50,,"Don récurrent de E.P. (€5,00)"
+2021-02-04,paypal,17.13,Don récurrent de F.L.,0,-0.87,,"Don récurrent de F.L. (€18,00)"
+2021-01-29,paypal,4.50,Don récurrent de M.D.,0,-0.50,,"Don récurrent de M.D. (€5,00)"
+2021-01-24,paypal,1.59,Don récurrent de A.D.,0,-0.41,,"Don récurrent de A.D. (€2,00)"
+2021-01-22,paypal,4.50,Don récurrent de A.B.,0,-0.50,,"Don récurrent de A.B. (€5,00)"
 2021-01-17,paypal,-7.12,Paiement à Online SAS,0,0.00,,Paiement à Online SAS
 2021-01-17,paypal,-61.24,Achat effectué auprès de GANDI SAS,0,0.00,,Achat effectué auprès de GANDI SAS
 2021-01-15,paypal,48.20,Don de D.D.,0,-1.80,,"Don de D.D. (€50,00)"
